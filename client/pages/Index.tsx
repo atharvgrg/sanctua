@@ -234,9 +234,11 @@ export default function Index() {
                   <li>• Personal Training</li>
                   <li>• Group Classes</li>
                 </ul>
-                <Button variant="secondary" className="bg-white text-garner-teal hover:bg-gray-100">
-                  Explore Gym →
-                </Button>
+                <Link to="/gym">
+                  <Button variant="secondary" className="bg-white text-garner-teal hover:bg-gray-100">
+                    Explore Gym →
+                  </Button>
+                </Link>
               </CardContent>
             </Card>
 
