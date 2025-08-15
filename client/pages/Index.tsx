@@ -2,17 +2,28 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { 
   Users, 
-  Building, 
-  TrendingUp, 
-  BarChart3,
+  Heart, 
+  Activity, 
+  Shield,
   ArrowRight,
   CheckCircle,
   Star,
-  Shield,
-  Activity,
+  Stethoscope,
   Clock,
   ChevronRight,
-  Play
+  Play,
+  Dumbbell,
+  Brain,
+  Apple,
+  Thermometer,
+  Zap,
+  Eye,
+  AlertTriangle,
+  HeartHandshake,
+  Video,
+  Calendar,
+  MapPin,
+  Phone
 } from "lucide-react";
 
 export default function Index() {
@@ -24,38 +35,39 @@ export default function Index() {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
               <h1 className="text-4xl lg:text-6xl font-bold text-gray-900 leading-tight mb-6">
-                Choose your doctor with confidence
+                Your Health, <span className="text-garner-teal">Our Priority</span>
               </h1>
               
               <p className="text-xl text-gray-600 mb-8 leading-relaxed">
-                Make informed healthcare decisions with data-driven insights. 
-                Find the best providers in your network and get the care you deserve.
+                Comprehensive healthcare solutions at your fingertips. From symptom 
+                checking to specialized care, we're here to support your wellness journey 
+                every step of the way.
               </p>
               
               <div className="flex flex-col sm:flex-row gap-4">
                 <Button className="bg-garner-teal hover:bg-garner-dark-teal text-white px-8 py-3 text-lg font-medium">
-                  Get started
+                  Check Your Symptoms
                 </Button>
                 <Button variant="outline" className="border-gray-300 text-gray-700 px-8 py-3 text-lg font-medium">
-                  Learn more
+                  Explore Healthcare Options
                 </Button>
               </div>
             </div>
             
             <div className="relative">
               <div className="bg-gradient-to-br from-blue-50 to-green-50 rounded-3xl p-8 relative overflow-hidden">
-                {/* Illustration placeholder - representing diverse healthcare professionals */}
+                {/* Healthcare illustration */}
                 <div className="grid grid-cols-3 gap-4 relative z-10">
                   <div className="space-y-4">
                     <div className="w-20 h-20 bg-garner-teal/20 rounded-full flex items-center justify-center">
-                      <Users className="w-10 h-10 text-garner-teal" />
+                      <Stethoscope className="w-10 h-10 text-garner-teal" />
                     </div>
                     <div className="w-16 h-16 bg-orange-200 rounded-full"></div>
                   </div>
                   <div className="space-y-4 mt-8">
                     <div className="w-18 h-18 bg-green-200 rounded-full"></div>
                     <div className="w-20 h-20 bg-garner-green/20 rounded-full flex items-center justify-center">
-                      <TrendingUp className="w-10 h-10 text-garner-green" />
+                      <Heart className="w-10 h-10 text-garner-green" />
                     </div>
                   </div>
                   <div className="space-y-4">
@@ -69,14 +81,14 @@ export default function Index() {
                 <div className="absolute top-4 right-4 bg-white rounded-lg p-3 shadow-lg">
                   <div className="flex items-center space-x-2">
                     <div className="w-2 h-2 bg-garner-teal rounded-full"></div>
-                    <span className="text-sm font-medium">98% Accuracy</span>
+                    <span className="text-sm font-medium">Your Complete Healthcare Companion</span>
                   </div>
                 </div>
                 
                 <div className="absolute bottom-4 left-4 bg-white rounded-lg p-3 shadow-lg">
                   <div className="flex items-center space-x-2">
-                    <BarChart3 className="w-4 h-4 text-garner-green" />
-                    <span className="text-sm font-medium">Real-time Data</span>
+                    <Shield className="w-4 h-4 text-garner-green" />
+                    <span className="text-sm font-medium">Secure & Confidential</span>
                   </div>
                 </div>
               </div>
@@ -85,7 +97,7 @@ export default function Index() {
         </div>
       </section>
 
-      {/* Four Pillars Section */}
+      {/* Healthcare Services Section */}
       <section className="py-16 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -109,11 +121,11 @@ export default function Index() {
             <Card className="border-0 shadow-sm hover:shadow-md transition-shadow bg-white">
               <CardContent className="p-6">
                 <div className="w-12 h-12 bg-gray-900/10 rounded-lg flex items-center justify-center mb-4">
-                  <Building className="w-6 h-6 text-gray-900" />
+                  <Heart className="w-6 h-6 text-gray-900" />
                 </div>
                 <h3 className="font-semibold text-gray-900 mb-2">For Employers</h3>
                 <p className="text-sm text-gray-600 mb-4">
-                  Enroll your benefits and reduce costs without changing plans or networks.
+                  Provide your employees with comprehensive healthcare benefits and wellness programs.
                 </p>
                 <Button variant="link" className="text-garner-teal p-0 h-auto">
                   Learn more <ArrowRight className="w-4 h-4 ml-1" />
@@ -125,11 +137,11 @@ export default function Index() {
             <Card className="border-0 shadow-sm hover:shadow-md transition-shadow bg-white">
               <CardContent className="p-6">
                 <div className="w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center mb-4">
-                  <TrendingUp className="w-6 h-6 text-orange-600" />
+                  <Activity className="w-6 h-6 text-orange-600" />
                 </div>
                 <h3 className="font-semibold text-gray-900 mb-2">For Advisors</h3>
                 <p className="text-sm text-gray-600 mb-4">
-                  Bring your clients a revolutionary solution with real savings.
+                  Guide your clients to better healthcare decisions with our comprehensive platform.
                 </p>
                 <Button variant="link" className="text-garner-teal p-0 h-auto">
                   Learn more <ArrowRight className="w-4 h-4 ml-1" />
@@ -141,11 +153,11 @@ export default function Index() {
             <Card className="border-0 shadow-sm hover:shadow-md transition-shadow bg-white">
               <CardContent className="p-6">
                 <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
-                  <BarChart3 className="w-6 h-6 text-blue-600" />
+                  <Stethoscope className="w-6 h-6 text-blue-600" />
                 </div>
                 <h3 className="font-semibold text-gray-900 mb-2">DataPro</h3>
                 <p className="text-sm text-gray-600 mb-4">
-                  Better value-based care using Garner's data-driven insights.
+                  Better healthcare insights using SANCTUA's comprehensive health data platform.
                 </p>
                 <Button variant="link" className="text-garner-teal p-0 h-auto">
                   Learn more <ArrowRight className="w-4 h-4 ml-1" />
@@ -156,127 +168,218 @@ export default function Index() {
         </div>
       </section>
 
-      {/* Data Revolution Section */}
+      {/* Fitness Programs Section */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-8">
-            The next revolution in healthcare data
+            Transform Your <span className="text-garner-green">Wellness Journey</span>
           </h2>
+          <p className="text-lg text-gray-600 mb-12 max-w-2xl mx-auto">
+            Discover personalized fitness solutions designed to help you achieve your health goals
+          </p>
           
-          <div className="relative max-w-4xl mx-auto">
-            <div className="bg-gray-900 rounded-2xl overflow-hidden relative">
-              <div className="aspect-video flex items-center justify-center">
-                {/* Video placeholder */}
-                <div className="flex items-center justify-center space-x-4 text-white">
-                  <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center">
-                    <Play className="w-8 h-8 text-white ml-1" />
-                  </div>
-                  <div className="text-left">
-                    <div className="text-lg font-medium">Dr. Barbara Jay</div>
-                    <div className="text-sm text-gray-300">Chief Medical Officer</div>
-                  </div>
+          <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            {/* Yoga Card */}
+            <Card className="bg-gradient-to-br from-garner-green to-green-400 text-white border-0 overflow-hidden relative">
+              <CardContent className="p-8 relative z-10">
+                <div className="w-12 h-12 bg-white/20 rounded-lg flex items-center justify-center mb-6">
+                  <Brain className="w-6 h-6 text-white" />
                 </div>
-              </div>
-              
-              {/* Video controls */}
-              <div className="absolute bottom-4 right-4 flex space-x-2">
-                <button className="w-8 h-8 bg-white/20 rounded flex items-center justify-center">
-                  <span className="text-white text-xs">CC</span>
-                </button>
-                <button className="w-8 h-8 bg-white/20 rounded flex items-center justify-center">
-                  <span className="text-white text-xs">⚙</span>
-                </button>
-                <button className="w-8 h-8 bg-white/20 rounded flex items-center justify-center">
-                  <span className="text-white text-xs">⛶</span>
-                </button>
-              </div>
-            </div>
+                <h3 className="text-2xl font-bold mb-2">Yoga</h3>
+                <div className="flex items-center mb-4">
+                  <Star className="w-4 h-4 fill-current mr-1" />
+                  <span className="text-sm">4.6</span>
+                </div>
+                <p className="text-white/90 mb-6">
+                  Find inner peace and flexibility with guided yoga sessions
+                </p>
+                <ul className="space-y-2 text-sm text-white/90 mb-6">
+                  <li>• Beginner Friendly</li>
+                  <li>• Expert Instructors</li>
+                  <li>• Stress Relief</li>
+                </ul>
+                <Button variant="secondary" className="bg-white text-garner-green hover:bg-gray-100">
+                  Explore Yoga →
+                </Button>
+              </CardContent>
+            </Card>
+
+            {/* Gym Card */}
+            <Card className="bg-gradient-to-br from-garner-teal to-blue-400 text-white border-0 overflow-hidden">
+              <CardContent className="p-8">
+                <div className="w-12 h-12 bg-white/20 rounded-lg flex items-center justify-center mb-6">
+                  <Dumbbell className="w-6 h-6 text-white" />
+                </div>
+                <h3 className="text-2xl font-bold mb-2">Gym</h3>
+                <div className="flex items-center mb-4">
+                  <Star className="w-4 h-4 fill-current mr-1" />
+                  <span className="text-sm">4.9</span>
+                </div>
+                <p className="text-white/90 mb-6">
+                  Strength training and cardio workouts for all fitness levels
+                </p>
+                <ul className="space-y-2 text-sm text-white/90 mb-6">
+                  <li>• Professional Equipment</li>
+                  <li>• Personal Training</li>
+                  <li>• Group Classes</li>
+                </ul>
+                <Button variant="secondary" className="bg-white text-garner-teal hover:bg-gray-100">
+                  Explore Gym →
+                </Button>
+              </CardContent>
+            </Card>
+
+            {/* Diet Generation Card */}
+            <Card className="bg-gradient-to-br from-purple-500 to-purple-400 text-white border-0 overflow-hidden">
+              <CardContent className="p-8">
+                <div className="w-12 h-12 bg-white/20 rounded-lg flex items-center justify-center mb-6">
+                  <Apple className="w-6 h-6 text-white" />
+                </div>
+                <h3 className="text-2xl font-bold mb-2">Diet Generation</h3>
+                <div className="flex items-center mb-4">
+                  <Star className="w-4 h-4 fill-current mr-1" />
+                  <span className="text-sm">4.5</span>
+                </div>
+                <p className="text-white/90 mb-6">
+                  Personalized nutrition plans tailored to your health goals
+                </p>
+                <ul className="space-y-2 text-sm text-white/90 mb-6">
+                  <li>• Custom Meal Plans</li>
+                  <li>• Nutritionist Approved</li>
+                  <li>• Health Tracking</li>
+                </ul>
+                <Button variant="secondary" className="bg-white text-purple-500 hover:bg-gray-100">
+                  Explore Diet Generation →
+                </Button>
+              </CardContent>
+            </Card>
           </div>
         </div>
       </section>
 
-      {/* Data Analytics Section */}
+      {/* Symptom Checker Section */}
       <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
-            <div className="relative">
-              <div className="bg-gradient-to-br from-garner-teal/5 to-garner-green/5 rounded-3xl p-12">
-                {/* Map illustration */}
-                <div className="relative">
-                  <div className="w-full h-64 bg-garner-teal/20 rounded-2xl flex items-center justify-center">
-                    <div className="text-center">
-                      <Activity className="w-16 h-16 text-garner-teal mx-auto mb-4" />
-                      <div className="text-lg font-medium text-garner-teal">Healthcare Analytics Map</div>
-                      <div className="text-sm text-gray-600 mt-2">Nationwide Provider Network</div>
-                    </div>
-                  </div>
-                  
-                  {/* Floating data points */}
-                  <div className="absolute top-4 left-4 bg-white rounded-lg p-2 shadow-lg">
-                    <div className="text-xs font-medium text-garner-teal">60B+ Records</div>
-                  </div>
-                  <div className="absolute bottom-4 right-4 bg-white rounded-lg p-2 shadow-lg">
-                    <div className="text-xs font-medium text-garner-green">320M Patients</div>
-                  </div>
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-gray-900 mb-6">
+              Quick <span className="text-garner-teal">Symptom Guide</span>
+            </h2>
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+              Understand your symptoms and find the right specialist for your needs
+            </p>
+          </div>
+
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+            {/* Symptom Cards */}
+            <Card className="border-0 shadow-sm hover:shadow-md transition-shadow cursor-pointer bg-white">
+              <CardContent className="p-6 text-center">
+                <div className="w-12 h-12 bg-garner-teal/10 rounded-lg flex items-center justify-center mx-auto mb-4">
+                  <Thermometer className="w-6 h-6 text-garner-teal" />
                 </div>
-              </div>
-            </div>
-            
-            <div>
-              <h2 className="text-4xl font-bold text-gray-900 mb-6">
-                More data and new analytics to evaluate providers
-              </h2>
-              
-              <p className="text-lg text-gray-600 mb-8">
-                We've compiled the largest claims database in the U.S.—over 
-                60 billion medical records from 320 million patients—to 
-                identify which doctors diagnose more accurately and have 
-                better patient outcomes.
-              </p>
-              
-              <Button variant="outline" className="border-gray-300 text-gray-700">
-                See how it works <ArrowRight className="w-4 h-4 ml-2" />
-              </Button>
-            </div>
+                <h3 className="font-semibold text-gray-900 mb-2">Fever</h3>
+                <p className="text-sm text-gray-600">High body temperature and related symptoms</p>
+              </CardContent>
+            </Card>
+
+            <Card className="border-0 shadow-sm hover:shadow-md transition-shadow cursor-pointer bg-white">
+              <CardContent className="p-6 text-center">
+                <div className="w-12 h-12 bg-garner-green/10 rounded-lg flex items-center justify-center mx-auto mb-4">
+                  <Zap className="w-6 h-6 text-garner-green" />
+                </div>
+                <h3 className="font-semibold text-gray-900 mb-2">Gastric / Colic Pain</h3>
+                <p className="text-sm text-gray-600">Abdominal discomfort and digestive issues</p>
+              </CardContent>
+            </Card>
+
+            <Card className="border-0 shadow-sm hover:shadow-md transition-shadow cursor-pointer bg-white">
+              <CardContent className="p-6 text-center">
+                <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mx-auto mb-4">
+                  <Activity className="w-6 h-6 text-purple-600" />
+                </div>
+                <h3 className="font-semibold text-gray-900 mb-2">Body Aches</h3>
+                <p className="text-sm text-gray-600">General muscle and joint discomfort</p>
+              </CardContent>
+            </Card>
+
+            <Card className="border-0 shadow-sm hover:shadow-md transition-shadow cursor-pointer bg-white">
+              <CardContent className="p-6 text-center">
+                <div className="w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center mx-auto mb-4">
+                  <AlertTriangle className="w-6 h-6 text-orange-600" />
+                </div>
+                <h3 className="font-semibold text-gray-900 mb-2">Dust Allergy</h3>
+                <p className="text-sm text-gray-600">Respiratory reactions and environmental allergens</p>
+              </CardContent>
+            </Card>
           </div>
         </div>
       </section>
 
-      {/* Blog Section */}
+      {/* Healthcare Services */}
       <section className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-16 items-start">
-            <div>
-              <div className="text-sm font-medium text-gray-500 mb-4">BLOG</div>
-              <h2 className="text-3xl font-bold text-gray-900 mb-6">
-                Why "Just To Be Safe" Is Actually More Dangerous
-              </h2>
-              <p className="text-gray-600 mb-8">
-                What the data says about the harm of unnecessary medical tests.
-              </p>
-              <Button variant="outline" className="border-gray-300 text-gray-700">
-                Read more <ArrowRight className="w-4 h-4 ml-2" />
-              </Button>
-            </div>
-            
-            <div className="relative">
-              <div className="bg-gradient-to-br from-orange-50 to-blue-50 rounded-2xl p-8">
-                <div className="bg-white rounded-xl p-6 shadow-sm">
-                  <div className="flex items-center space-x-4 mb-4">
-                    <div className="w-12 h-12 bg-garner-teal/10 rounded-full flex items-center justify-center">
-                      <Shield className="w-6 h-6 text-garner-teal" />
-                    </div>
-                    <div>
-                      <div className="font-medium text-gray-900">Healthcare Insights</div>
-                      <div className="text-sm text-gray-500">Data-driven decisions</div>
-                    </div>
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-gray-900 mb-6">
+              Find the <span className="text-garner-teal">Perfect Care</span>
+            </h2>
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+              Discover healthcare solutions tailored to your specific needs and preferences
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 gap-8">
+            {/* Local Clinics */}
+            <Card className="border-0 shadow-lg hover:shadow-xl transition-shadow">
+              <CardContent className="p-8">
+                <div className="flex items-start space-x-4">
+                  <div className="w-16 h-16 bg-garner-teal/10 rounded-xl flex items-center justify-center flex-shrink-0">
+                    <MapPin className="w-8 h-8 text-garner-teal" />
                   </div>
-                  <div className="text-sm text-gray-600">
-                    How to Solve the Engagement Problem
+                  <div className="flex-1">
+                    <h3 className="text-xl font-bold text-gray-900 mb-2">Local Clinics</h3>
+                    <p className="text-gray-600 mb-4">
+                      Find nearby medical clinics for routine checkups and consultations
+                    </p>
+                    <div className="flex items-center space-x-4 text-sm text-gray-500">
+                      <div className="flex items-center">
+                        <Star className="w-4 h-4 text-yellow-400 fill-current mr-1" />
+                        <span className="font-medium">4.7</span>
+                      </div>
+                      <div className="flex items-center">
+                        <Clock className="w-4 h-4 mr-1" />
+                        <span>15-30 minutes</span>
+                      </div>
+                    </div>
                   </div>
                 </div>
-              </div>
-            </div>
+              </CardContent>
+            </Card>
+
+            {/* Specialist Doctors */}
+            <Card className="border-0 shadow-lg hover:shadow-xl transition-shadow">
+              <CardContent className="p-8">
+                <div className="flex items-start space-x-4">
+                  <div className="w-16 h-16 bg-garner-green/10 rounded-xl flex items-center justify-center flex-shrink-0">
+                    <Users className="w-8 h-8 text-garner-green" />
+                  </div>
+                  <div className="flex-1">
+                    <h3 className="text-xl font-bold text-gray-900 mb-2">Specialist Doctors</h3>
+                    <p className="text-gray-600 mb-4">
+                      Connect with specialized healthcare professionals for expert care
+                    </p>
+                    <div className="flex items-center space-x-4 text-sm text-gray-500">
+                      <div className="flex items-center">
+                        <Star className="w-4 h-4 text-yellow-400 fill-current mr-1" />
+                        <span className="font-medium">4.9</span>
+                      </div>
+                      <div className="flex items-center">
+                        <Clock className="w-4 h-4 mr-1" />
+                        <span>1-2 weeks</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
           </div>
         </div>
       </section>
@@ -312,48 +415,45 @@ export default function Index() {
         </div>
       </section>
 
-      {/* Resources Section */}
+      {/* Stats Section */}
       <section className="py-20 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center mb-12">
-            <h2 className="text-3xl font-bold text-gray-900">Resources</h2>
-            <Button variant="outline" className="border-gray-300 text-gray-700">
-              See more <ChevronRight className="w-4 h-4 ml-1" />
-            </Button>
-          </div>
-          
-          <div className="grid lg:grid-cols-2 gap-12">
-            <Card className="border-0 shadow-sm bg-white">
-              <CardContent className="p-8">
-                <div className="text-sm font-medium text-gray-500 mb-4">BLOG</div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-4">
-                  Why "Just To Be Safe" Is Actually More Dangerous
-                </h3>
-                <p className="text-gray-600 mb-6">
-                  What the data says about the harm of unnecessary medical tests.
-                </p>
-                <Button variant="outline" className="border-gray-300 text-gray-700">
-                  Read more <ArrowRight className="w-4 h-4 ml-2" />
-                </Button>
-              </CardContent>
-            </Card>
-            
-            <div className="relative">
-              <div className="bg-gradient-to-br from-blue-50 to-green-50 rounded-2xl overflow-hidden">
-                <div className="aspect-video bg-white/50 flex items-center justify-center">
-                  <div className="text-center">
-                    <Users className="w-16 h-16 text-garner-teal mx-auto mb-4" />
-                    <div className="text-lg font-medium text-gray-900">Patient Success Stories</div>
-                  </div>
-                </div>
-                <div className="p-6">
-                  <div className="text-sm font-medium text-gray-500 mb-2">BLOG</div>
-                  <h3 className="font-bold text-gray-900">
-                    How to Solve the Engagement Problem
-                  </h3>
-                </div>
-              </div>
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-4xl font-bold text-gray-900 mb-4">
+            Complete <span className="text-garner-green">Health Coverage</span>
+          </h2>
+          <p className="text-lg text-gray-600 mb-12 max-w-2xl mx-auto">
+            Choose from our comprehensive healthcare plans designed to meet every need and budget
+          </p>
+
+          {/* Stats */}
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16">
+            <div className="text-center">
+              <div className="text-3xl font-bold text-garner-teal mb-2">150+</div>
+              <div className="text-gray-600">Expert Specialists</div>
             </div>
+            <div className="text-center">
+              <div className="text-3xl font-bold text-garner-teal mb-2">24/7</div>
+              <div className="text-gray-600">Emergency Support</div>
+            </div>
+            <div className="text-center">
+              <div className="text-3xl font-bold text-garner-teal mb-2">95%</div>
+              <div className="text-gray-600">Patient Satisfaction</div>
+            </div>
+            <div className="text-center">
+              <div className="text-3xl font-bold text-garner-teal mb-2">10k+</div>
+              <div className="text-gray-600">Lives Transformed</div>
+            </div>
+          </div>
+
+          <div className="mb-12">
+            <h3 className="text-2xl font-bold text-gray-900 mb-4">Ready to Get Specialized Care?</h3>
+            <p className="text-gray-600 mb-8">
+              Connect with our specialists for personalized treatment plans and expert medical guidance
+            </p>
+            <Button className="bg-garner-teal hover:bg-garner-dark-teal text-white px-8 py-3 text-lg">
+              <Calendar className="w-5 h-5 mr-2" />
+              Schedule Free Consultation
+            </Button>
           </div>
         </div>
       </section>
