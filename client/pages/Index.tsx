@@ -1,10 +1,10 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { 
-  Users, 
-  Heart, 
-  Activity, 
+import {
+  Users,
+  Heart,
+  Activity,
   Shield,
   ArrowRight,
   CheckCircle,
@@ -24,7 +24,7 @@ import {
   Video,
   Calendar,
   MapPin,
-  Phone
+  Phone,
 } from "lucide-react";
 
 export default function Index() {
@@ -36,25 +36,29 @@ export default function Index() {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
               <h1 className="text-4xl lg:text-6xl font-bold text-gray-900 leading-tight mb-6">
-                Your Health, <span className="text-garner-teal">Our Priority</span>
+                Your Health,{" "}
+                <span className="text-garner-teal">Our Priority</span>
               </h1>
-              
+
               <p className="text-xl text-gray-600 mb-8 leading-relaxed">
-                Comprehensive healthcare solutions at your fingertips. From symptom 
-                checking to specialized care, we're here to support your wellness journey 
-                every step of the way.
+                Comprehensive healthcare solutions at your fingertips. From
+                symptom checking to specialized care, we're here to support your
+                wellness journey every step of the way.
               </p>
-              
+
               <div className="flex flex-col sm:flex-row gap-4">
                 <Button className="bg-garner-teal hover:bg-garner-dark-teal text-white px-8 py-3 text-lg font-medium">
                   Check Your Symptoms
                 </Button>
-                <Button variant="outline" className="border-gray-300 text-gray-700 px-8 py-3 text-lg font-medium">
+                <Button
+                  variant="outline"
+                  className="border-gray-300 text-gray-700 px-8 py-3 text-lg font-medium"
+                >
                   Explore Healthcare Options
                 </Button>
               </div>
             </div>
-            
+
             <div className="relative">
               <div className="bg-gradient-to-br from-blue-50 to-green-50 rounded-3xl p-8 relative overflow-hidden">
                 {/* Healthcare illustration */}
@@ -77,19 +81,23 @@ export default function Index() {
                     <div className="w-14 h-14 bg-yellow-200 rounded-full"></div>
                   </div>
                 </div>
-                
+
                 {/* Floating elements */}
                 <div className="absolute top-4 right-4 bg-white rounded-lg p-3 shadow-lg">
                   <div className="flex items-center space-x-2">
                     <div className="w-2 h-2 bg-garner-teal rounded-full"></div>
-                    <span className="text-sm font-medium">Your Complete Healthcare Companion</span>
+                    <span className="text-sm font-medium">
+                      Your Complete Healthcare Companion
+                    </span>
                   </div>
                 </div>
-                
+
                 <div className="absolute bottom-4 left-4 bg-white rounded-lg p-3 shadow-lg">
                   <div className="flex items-center space-x-2">
                     <Shield className="w-4 h-4 text-garner-green" />
-                    <span className="text-sm font-medium">Secure & Confidential</span>
+                    <span className="text-sm font-medium">
+                      Secure & Confidential
+                    </span>
                   </div>
                 </div>
               </div>
@@ -106,7 +114,8 @@ export default function Index() {
               Comprehensive Healthcare Solutions
             </h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              Tailored healthcare services for every need, from individuals to enterprises
+              Tailored healthcare services for every need, from individuals to
+              enterprises
             </p>
           </div>
 
@@ -117,12 +126,19 @@ export default function Index() {
                 <div className="w-16 h-16 bg-gradient-to-br from-garner-teal to-garner-dark-teal rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
                   <Users className="w-8 h-8 text-white" />
                 </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-3">For Individuals & Families</h3>
+                <h3 className="text-xl font-bold text-gray-900 mb-3">
+                  For Individuals & Families
+                </h3>
                 <p className="text-gray-600 mb-6 leading-relaxed">
-                  Find the best healthcare providers in your network and get your medical bills reimbursed.
+                  Find the best healthcare providers in your network and get
+                  your medical bills reimbursed.
                 </p>
-                <Button variant="link" className="text-garner-teal p-0 h-auto font-semibold group-hover:text-garner-dark-teal transition-colors">
-                  Learn more <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+                <Button
+                  variant="link"
+                  className="text-garner-teal p-0 h-auto font-semibold group-hover:text-garner-dark-teal transition-colors"
+                >
+                  Learn more{" "}
+                  <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
                 </Button>
               </CardContent>
             </Card>
@@ -133,12 +149,19 @@ export default function Index() {
                 <div className="w-16 h-16 bg-gradient-to-br from-gray-700 to-gray-900 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
                   <Heart className="w-8 h-8 text-white" />
                 </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-3">For Employers</h3>
+                <h3 className="text-xl font-bold text-gray-900 mb-3">
+                  For Employers
+                </h3>
                 <p className="text-gray-600 mb-6 leading-relaxed">
-                  Provide your employees with comprehensive healthcare benefits and wellness programs.
+                  Provide your employees with comprehensive healthcare benefits
+                  and wellness programs.
                 </p>
-                <Button variant="link" className="text-garner-teal p-0 h-auto font-semibold group-hover:text-garner-dark-teal transition-colors">
-                  Learn more <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+                <Button
+                  variant="link"
+                  className="text-garner-teal p-0 h-auto font-semibold group-hover:text-garner-dark-teal transition-colors"
+                >
+                  Learn more{" "}
+                  <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
                 </Button>
               </CardContent>
             </Card>
@@ -149,12 +172,19 @@ export default function Index() {
                 <div className="w-16 h-16 bg-gradient-to-br from-orange-500 to-orange-600 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
                   <Activity className="w-8 h-8 text-white" />
                 </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-3">For Advisors</h3>
+                <h3 className="text-xl font-bold text-gray-900 mb-3">
+                  For Advisors
+                </h3>
                 <p className="text-gray-600 mb-6 leading-relaxed">
-                  Guide your clients to better healthcare decisions with our comprehensive platform.
+                  Guide your clients to better healthcare decisions with our
+                  comprehensive platform.
                 </p>
-                <Button variant="link" className="text-garner-teal p-0 h-auto font-semibold group-hover:text-garner-dark-teal transition-colors">
-                  Learn more <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+                <Button
+                  variant="link"
+                  className="text-garner-teal p-0 h-auto font-semibold group-hover:text-garner-dark-teal transition-colors"
+                >
+                  Learn more{" "}
+                  <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
                 </Button>
               </CardContent>
             </Card>
@@ -165,12 +195,19 @@ export default function Index() {
                 <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-600 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
                   <Stethoscope className="w-8 h-8 text-white" />
                 </div>
-                <h3 className="text-xl font-bold text-gray-900 mb-3">DataPro</h3>
+                <h3 className="text-xl font-bold text-gray-900 mb-3">
+                  DataPro
+                </h3>
                 <p className="text-gray-600 mb-6 leading-relaxed">
-                  Better healthcare insights using SANCTUA's comprehensive health data platform.
+                  Better healthcare insights using SANCTUA's comprehensive
+                  health data platform.
                 </p>
-                <Button variant="link" className="text-garner-teal p-0 h-auto font-semibold group-hover:text-garner-dark-teal transition-colors">
-                  Learn more <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
+                <Button
+                  variant="link"
+                  className="text-garner-teal p-0 h-auto font-semibold group-hover:text-garner-dark-teal transition-colors"
+                >
+                  Learn more{" "}
+                  <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
                 </Button>
               </CardContent>
             </Card>
@@ -182,12 +219,14 @@ export default function Index() {
       <section className="py-24 bg-white border-t border-gray-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
           <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-8">
-            Transform Your <span className="text-garner-green">Wellness Journey</span>
+            Transform Your{" "}
+            <span className="text-garner-green">Wellness Journey</span>
           </h2>
           <p className="text-lg text-gray-600 mb-12 max-w-2xl mx-auto">
-            Discover personalized fitness solutions designed to help you achieve your health goals
+            Discover personalized fitness solutions designed to help you achieve
+            your health goals
           </p>
-          
+
           <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
             {/* Yoga Card */}
             <Card className="bg-gradient-to-br from-garner-green to-green-400 text-white border-0 overflow-hidden relative">
@@ -209,7 +248,10 @@ export default function Index() {
                   <li>• Stress Relief</li>
                 </ul>
                 <Link to="/yoga">
-                  <Button variant="secondary" className="bg-white text-garner-green hover:bg-gray-100">
+                  <Button
+                    variant="secondary"
+                    className="bg-white text-garner-green hover:bg-gray-100"
+                  >
                     Explore Yoga →
                   </Button>
                 </Link>
@@ -236,7 +278,10 @@ export default function Index() {
                   <li>• Group Classes</li>
                 </ul>
                 <Link to="/gym">
-                  <Button variant="secondary" className="bg-white text-garner-teal hover:bg-gray-100">
+                  <Button
+                    variant="secondary"
+                    className="bg-white text-garner-teal hover:bg-gray-100"
+                  >
                     Explore Gym →
                   </Button>
                 </Link>
@@ -263,7 +308,10 @@ export default function Index() {
                   <li>• Health Tracking</li>
                 </ul>
                 <Link to="/diet-generation">
-                  <Button variant="secondary" className="bg-white text-purple-500 hover:bg-gray-100">
+                  <Button
+                    variant="secondary"
+                    className="bg-white text-purple-500 hover:bg-gray-100"
+                  >
                     Explore Diet Generation →
                   </Button>
                 </Link>
@@ -281,7 +329,8 @@ export default function Index() {
               Quick <span className="text-garner-teal">Symptom Guide</span>
             </h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              Understand your symptoms and find the right specialist for your needs
+              Understand your symptoms and find the right specialist for your
+              needs
             </p>
           </div>
 
@@ -293,7 +342,9 @@ export default function Index() {
                   <Thermometer className="w-7 h-7 text-white" />
                 </div>
                 <h3 className="font-bold text-gray-900 mb-2">Fever</h3>
-                <p className="text-sm text-gray-600 leading-relaxed">High body temperature and related symptoms</p>
+                <p className="text-sm text-gray-600 leading-relaxed">
+                  High body temperature and related symptoms
+                </p>
               </CardContent>
             </Card>
 
@@ -302,8 +353,12 @@ export default function Index() {
                 <div className="w-14 h-14 bg-gradient-to-br from-garner-green to-garner-dark-green rounded-xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
                   <Zap className="w-7 h-7 text-white" />
                 </div>
-                <h3 className="font-bold text-gray-900 mb-2">Gastric / Colic Pain</h3>
-                <p className="text-sm text-gray-600 leading-relaxed">Abdominal discomfort and digestive issues</p>
+                <h3 className="font-bold text-gray-900 mb-2">
+                  Gastric / Colic Pain
+                </h3>
+                <p className="text-sm text-gray-600 leading-relaxed">
+                  Abdominal discomfort and digestive issues
+                </p>
               </CardContent>
             </Card>
 
@@ -313,7 +368,9 @@ export default function Index() {
                   <Activity className="w-7 h-7 text-white" />
                 </div>
                 <h3 className="font-bold text-gray-900 mb-2">Body Aches</h3>
-                <p className="text-sm text-gray-600 leading-relaxed">General muscle and joint discomfort</p>
+                <p className="text-sm text-gray-600 leading-relaxed">
+                  General muscle and joint discomfort
+                </p>
               </CardContent>
             </Card>
 
@@ -323,7 +380,9 @@ export default function Index() {
                   <AlertTriangle className="w-7 h-7 text-white" />
                 </div>
                 <h3 className="font-bold text-gray-900 mb-2">Dust Allergy</h3>
-                <p className="text-sm text-gray-600 leading-relaxed">Respiratory reactions and environmental allergens</p>
+                <p className="text-sm text-gray-600 leading-relaxed">
+                  Respiratory reactions and environmental allergens
+                </p>
               </CardContent>
             </Card>
           </div>
@@ -338,7 +397,8 @@ export default function Index() {
               Find the <span className="text-garner-teal">Perfect Care</span>
             </h2>
             <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              Discover healthcare solutions tailored to your specific needs and preferences
+              Discover healthcare solutions tailored to your specific needs and
+              preferences
             </p>
           </div>
 
@@ -356,9 +416,12 @@ export default function Index() {
                         Primary Care
                       </span>
                     </div>
-                    <h3 className="text-2xl font-bold text-gray-900 mb-3">Local Clinics</h3>
+                    <h3 className="text-2xl font-bold text-gray-900 mb-3">
+                      Local Clinics
+                    </h3>
                     <p className="text-gray-600 mb-4 leading-relaxed">
-                      Find nearby medical clinics for routine checkups and consultations
+                      Find nearby medical clinics for routine checkups and
+                      consultations
                     </p>
                     <div className="flex items-center space-x-6 text-sm">
                       <div className="flex items-center">
@@ -388,9 +451,12 @@ export default function Index() {
                         Specialized Care
                       </span>
                     </div>
-                    <h3 className="text-2xl font-bold text-gray-900 mb-3">Specialist Doctors</h3>
+                    <h3 className="text-2xl font-bold text-gray-900 mb-3">
+                      Specialist Doctors
+                    </h3>
                     <p className="text-gray-600 mb-4 leading-relaxed">
-                      Connect with specialized healthcare professionals for expert care
+                      Connect with specialized healthcare professionals for
+                      expert care
                     </p>
                     <div className="flex items-center space-x-6 text-sm">
                       <div className="flex items-center">
@@ -418,20 +484,20 @@ export default function Index() {
               <h2 className="text-4xl font-bold mb-6">
                 Create your free account
               </h2>
-              <Button 
-                variant="secondary" 
+              <Button
+                variant="secondary"
                 className="bg-white text-garner-teal hover:bg-gray-50 font-medium px-8"
               >
                 Get started <ArrowRight className="w-4 h-4 ml-2" />
               </Button>
             </div>
-            
+
             <div className="text-white">
               <h2 className="text-4xl font-bold mb-6">
                 Give your employees the best care
               </h2>
-              <Button 
-                variant="outline" 
+              <Button
+                variant="outline"
                 className="border-white text-white hover:bg-white hover:text-garner-teal font-medium px-8"
               >
                 Book a demo <ArrowRight className="w-4 h-4 ml-2" />
@@ -448,33 +514,45 @@ export default function Index() {
             Complete <span className="text-garner-green">Health Coverage</span>
           </h2>
           <p className="text-lg text-gray-600 mb-12 max-w-2xl mx-auto">
-            Choose from our comprehensive healthcare plans designed to meet every need and budget
+            Choose from our comprehensive healthcare plans designed to meet
+            every need and budget
           </p>
 
           {/* Stats */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16">
             <div className="text-center">
-              <div className="text-3xl font-bold text-garner-teal mb-2">150+</div>
+              <div className="text-3xl font-bold text-garner-teal mb-2">
+                150+
+              </div>
               <div className="text-gray-600">Expert Specialists</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl font-bold text-garner-teal mb-2">24/7</div>
+              <div className="text-3xl font-bold text-garner-teal mb-2">
+                24/7
+              </div>
               <div className="text-gray-600">Emergency Support</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl font-bold text-garner-teal mb-2">95%</div>
+              <div className="text-3xl font-bold text-garner-teal mb-2">
+                95%
+              </div>
               <div className="text-gray-600">Patient Satisfaction</div>
             </div>
             <div className="text-center">
-              <div className="text-3xl font-bold text-garner-teal mb-2">10k+</div>
+              <div className="text-3xl font-bold text-garner-teal mb-2">
+                10k+
+              </div>
               <div className="text-gray-600">Lives Transformed</div>
             </div>
           </div>
 
           <div className="mb-12">
-            <h3 className="text-2xl font-bold text-gray-900 mb-4">Ready to Get Specialized Care?</h3>
+            <h3 className="text-2xl font-bold text-gray-900 mb-4">
+              Ready to Get Specialized Care?
+            </h3>
             <p className="text-gray-600 mb-8">
-              Connect with our specialists for personalized treatment plans and expert medical guidance
+              Connect with our specialists for personalized treatment plans and
+              expert medical guidance
             </p>
             <Button className="bg-garner-teal hover:bg-garner-dark-teal text-white px-8 py-3 text-lg">
               <Calendar className="w-5 h-5 mr-2" />

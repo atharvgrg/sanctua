@@ -2,15 +2,15 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { 
-  Mountain, 
-  Clock, 
-  Star, 
+import {
+  Mountain,
+  Clock,
+  Star,
   CheckCircle,
   Leaf,
   Heart,
   Zap,
-  Circle
+  Circle,
 } from "lucide-react";
 
 export default function Yoga() {
@@ -24,21 +24,23 @@ export default function Yoga() {
       level: "Beginner",
       duration: "1-2 minutes",
       category: "Standing",
-      description: "Stand tall with feet hip-width apart, arms at your sides. Ground through your feet and lengthen through the crown of your head.",
+      description:
+        "Stand tall with feet hip-width apart, arms at your sides. Ground through your feet and lengthen through the crown of your head.",
       benefits: ["Improves posture", "Strengthens legs", "Increases awareness"],
       icon: Mountain,
-      color: "bg-gradient-to-br from-green-500 to-green-600"
+      color: "bg-gradient-to-br from-green-500 to-green-600",
     },
     {
       id: 2,
       name: "Downward Dog",
       level: "Beginner",
-      duration: "1-3 minutes", 
+      duration: "1-3 minutes",
       category: "Inversion",
-      description: "From hands and knees, tuck toes under and lift hips up and back, creating an inverted V shape.",
+      description:
+        "From hands and knees, tuck toes under and lift hips up and back, creating an inverted V shape.",
       benefits: ["Stretches hamstrings", "Strengthens arms", "Energizes body"],
       icon: Circle,
-      color: "bg-gradient-to-br from-blue-500 to-blue-600"
+      color: "bg-gradient-to-br from-blue-500 to-blue-600",
     },
     {
       id: 3,
@@ -46,10 +48,11 @@ export default function Yoga() {
       level: "Intermediate",
       duration: "30 seconds each side",
       category: "Standing",
-      description: "Step left foot back, turn it out 45 degrees. Bend right knee over ankle, reach arms overhead.",
+      description:
+        "Step left foot back, turn it out 45 degrees. Bend right knee over ankle, reach arms overhead.",
       benefits: ["Strengthens legs", "Opens hips", "Improves balance"],
       icon: Zap,
-      color: "bg-gradient-to-br from-purple-500 to-purple-600"
+      color: "bg-gradient-to-br from-purple-500 to-purple-600",
     },
     {
       id: 4,
@@ -57,10 +60,11 @@ export default function Yoga() {
       level: "Intermediate",
       duration: "30-60 seconds each side",
       category: "Balance",
-      description: "Stand on left leg, place right foot on inner left thigh. Bring palms together at heart center.",
+      description:
+        "Stand on left leg, place right foot on inner left thigh. Bring palms together at heart center.",
       benefits: ["Improves balance", "Strengthens legs", "Increases focus"],
       icon: Leaf,
-      color: "bg-gradient-to-br from-green-600 to-green-700"
+      color: "bg-gradient-to-br from-green-600 to-green-700",
     },
     {
       id: 5,
@@ -68,10 +72,11 @@ export default function Yoga() {
       level: "Beginner",
       duration: "1-5 minutes",
       category: "Restorative",
-      description: "Kneel on floor, sit back on heels, fold forward with arms extended or by your sides.",
+      description:
+        "Kneel on floor, sit back on heels, fold forward with arms extended or by your sides.",
       benefits: ["Relieves stress", "Stretches back", "Calms mind"],
       icon: Heart,
-      color: "bg-gradient-to-br from-pink-500 to-pink-600"
+      color: "bg-gradient-to-br from-pink-500 to-pink-600",
     },
     {
       id: 6,
@@ -79,25 +84,42 @@ export default function Yoga() {
       level: "Intermediate",
       duration: "15-30 seconds",
       category: "Backbend",
-      description: "Lie face down, place palms under shoulders, gently lift chest while keeping pelvis grounded.",
-      benefits: ["Strengthens back", "Opens chest", "Improves spinal flexibility"],
+      description:
+        "Lie face down, place palms under shoulders, gently lift chest while keeping pelvis grounded.",
+      benefits: [
+        "Strengthens back",
+        "Opens chest",
+        "Improves spinal flexibility",
+      ],
       icon: Circle,
-      color: "bg-gradient-to-br from-orange-500 to-orange-600"
-    }
+      color: "bg-gradient-to-br from-orange-500 to-orange-600",
+    },
   ];
 
-  const filterTabs = ["All Poses", "Standing", "Balance", "Backbend", "Inversion", "Restorative"];
-  
-  const filteredPoses = activeFilter === "All Poses" 
-    ? poses 
-    : poses.filter(pose => pose.category === activeFilter);
+  const filterTabs = [
+    "All Poses",
+    "Standing",
+    "Balance",
+    "Backbend",
+    "Inversion",
+    "Restorative",
+  ];
+
+  const filteredPoses =
+    activeFilter === "All Poses"
+      ? poses
+      : poses.filter((pose) => pose.category === activeFilter);
 
   const getLevelColor = (level: string) => {
     switch (level) {
-      case "Beginner": return "bg-green-100 text-green-800";
-      case "Intermediate": return "bg-blue-100 text-blue-800";
-      case "Advanced": return "bg-purple-100 text-purple-800";
-      default: return "bg-gray-100 text-gray-800";
+      case "Beginner":
+        return "bg-green-100 text-green-800";
+      case "Intermediate":
+        return "bg-blue-100 text-blue-800";
+      case "Advanced":
+        return "bg-purple-100 text-purple-800";
+      default:
+        return "bg-gray-100 text-gray-800";
     }
   };
 
@@ -111,16 +133,16 @@ export default function Yoga() {
               🧘 Find Your Inner Peace
             </Button>
           </div>
-          
+
           <h1 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
             <span className="text-garner-green">Yoga</span> Practice
           </h1>
-          
+
           <p className="text-lg text-gray-600 max-w-2xl mx-auto mb-8">
-            Discover the ancient art of yoga with guided poses, breathing techniques, and 
-            mindfulness practices
+            Discover the ancient art of yoga with guided poses, breathing
+            techniques, and mindfulness practices
           </p>
-          
+
           <div className="flex flex-wrap justify-center gap-6 text-sm text-gray-600">
             <div className="flex items-center">
               <CheckCircle className="w-5 h-5 text-garner-green mr-2" />
@@ -187,23 +209,32 @@ export default function Yoga() {
             {filteredPoses.map((pose) => {
               const IconComponent = pose.icon;
               return (
-                <Card key={pose.id} className="border-0 shadow-lg hover:shadow-xl transition-all duration-300 group hover:-translate-y-1">
+                <Card
+                  key={pose.id}
+                  className="border-0 shadow-lg hover:shadow-xl transition-all duration-300 group hover:-translate-y-1"
+                >
                   <CardContent className="p-0">
                     {/* Icon Header */}
-                    <div className={`${pose.color} p-8 text-center relative overflow-hidden`}>
+                    <div
+                      className={`${pose.color} p-8 text-center relative overflow-hidden`}
+                    >
                       <div className="relative z-10">
                         <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
                           <IconComponent className="w-8 h-8 text-white" />
                         </div>
-                        <h3 className="text-2xl font-bold text-white mb-2">{pose.name}</h3>
+                        <h3 className="text-2xl font-bold text-white mb-2">
+                          {pose.name}
+                        </h3>
                         <div className="flex justify-center space-x-4 text-white/90 text-sm">
-                          <Badge className={`${getLevelColor(pose.level)} text-xs`}>
+                          <Badge
+                            className={`${getLevelColor(pose.level)} text-xs`}
+                          >
                             {pose.level}
                           </Badge>
                         </div>
                       </div>
                     </div>
-                    
+
                     {/* Content */}
                     <div className="p-6">
                       <div className="flex items-center justify-between mb-4">
@@ -215,26 +246,29 @@ export default function Yoga() {
                           {pose.category}
                         </Badge>
                       </div>
-                      
+
                       <p className="text-gray-600 text-sm mb-4 leading-relaxed">
                         {pose.description}
                       </p>
-                      
+
                       <div className="mb-6">
-                        <h4 className="text-sm font-semibold text-gray-900 mb-2">Benefits:</h4>
+                        <h4 className="text-sm font-semibold text-gray-900 mb-2">
+                          Benefits:
+                        </h4>
                         <ul className="space-y-1">
                           {pose.benefits.map((benefit, index) => (
-                            <li key={index} className="text-sm text-gray-600 flex items-center">
+                            <li
+                              key={index}
+                              className="text-sm text-gray-600 flex items-center"
+                            >
                               <div className="w-1.5 h-1.5 bg-garner-green rounded-full mr-2"></div>
                               {benefit}
                             </li>
                           ))}
                         </ul>
                       </div>
-                      
-                      <Button 
-                        className="w-full bg-gray-100 hover:bg-garner-green hover:text-white text-gray-700 font-medium transition-colors"
-                      >
+
+                      <Button className="w-full bg-gray-100 hover:bg-garner-green hover:text-white text-gray-700 font-medium transition-colors">
                         Practice This Pose
                       </Button>
                     </div>
@@ -253,17 +287,18 @@ export default function Yoga() {
             Ready to Start Your Yoga Journey?
           </h2>
           <p className="text-lg text-white/90 mb-8">
-            Join thousands who have found peace, strength, and flexibility through our guided yoga practices.
+            Join thousands who have found peace, strength, and flexibility
+            through our guided yoga practices.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button 
-              variant="secondary" 
+            <Button
+              variant="secondary"
               className="bg-white text-garner-green hover:bg-gray-50 font-medium px-8"
             >
               Start Free Trial
             </Button>
-            <Button 
-              variant="outline" 
+            <Button
+              variant="outline"
               className="border-white text-white hover:bg-white hover:text-garner-green font-medium px-8"
             >
               View All Programs

@@ -2,15 +2,15 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { 
-  Dumbbell, 
-  Clock, 
-  Star, 
+import {
+  Dumbbell,
+  Clock,
+  Star,
   CheckCircle,
   Target,
   TrendingUp,
   Zap,
-  Activity
+  Activity,
 } from "lucide-react";
 
 export default function Gym() {
@@ -30,7 +30,7 @@ export default function Gym() {
       targetMuscles: ["Chest", "Shoulders", "Triceps"],
       calories: "8 cal/set",
       icon: "💪",
-      color: "bg-gradient-to-br from-blue-500 to-blue-600"
+      color: "bg-gradient-to-br from-blue-500 to-blue-600",
     },
     {
       id: 2,
@@ -44,7 +44,7 @@ export default function Gym() {
       targetMuscles: ["Quadriceps", "Glutes", "Hamstrings"],
       calories: "10 cal/set",
       icon: "🦵",
-      color: "bg-gradient-to-br from-green-500 to-green-600"
+      color: "bg-gradient-to-br from-green-500 to-green-600",
     },
     {
       id: 3,
@@ -58,7 +58,7 @@ export default function Gym() {
       targetMuscles: ["Hamstrings", "Glutes", "Back", "Core"],
       calories: "15 cal/set",
       icon: "⚡",
-      color: "bg-gradient-to-br from-red-500 to-red-600"
+      color: "bg-gradient-to-br from-red-500 to-red-600",
     },
     {
       id: 4,
@@ -72,7 +72,7 @@ export default function Gym() {
       targetMuscles: ["Lats", "Biceps", "Middle Traps"],
       calories: "12 cal/set",
       icon: "🔄",
-      color: "bg-gradient-to-br from-purple-500 to-purple-600"
+      color: "bg-gradient-to-br from-purple-500 to-purple-600",
     },
     {
       id: 5,
@@ -86,7 +86,7 @@ export default function Gym() {
       targetMuscles: ["Chest", "Shoulders", "Triceps"],
       calories: "14 cal/set",
       icon: "🏋️",
-      color: "bg-gradient-to-br from-orange-500 to-orange-600"
+      color: "bg-gradient-to-br from-orange-500 to-orange-600",
     },
     {
       id: 6,
@@ -100,22 +100,27 @@ export default function Gym() {
       targetMuscles: ["Core", "Shoulders", "Glutes"],
       calories: "5 cal/set",
       icon: "🎯",
-      color: "bg-gradient-to-br from-teal-500 to-teal-600"
-    }
+      color: "bg-gradient-to-br from-teal-500 to-teal-600",
+    },
   ];
 
   const filterTabs = ["All Exercises", "Chest", "Back", "Legs", "Core"];
-  
-  const filteredExercises = activeFilter === "All Exercises" 
-    ? exercises 
-    : exercises.filter(exercise => exercise.category === activeFilter);
+
+  const filteredExercises =
+    activeFilter === "All Exercises"
+      ? exercises
+      : exercises.filter((exercise) => exercise.category === activeFilter);
 
   const getLevelColor = (level: string) => {
     switch (level) {
-      case "Beginner": return "bg-green-100 text-green-800";
-      case "Intermediate": return "bg-blue-100 text-blue-800";
-      case "Advanced": return "bg-red-100 text-red-800";
-      default: return "bg-gray-100 text-gray-800";
+      case "Beginner":
+        return "bg-green-100 text-green-800";
+      case "Intermediate":
+        return "bg-blue-100 text-blue-800";
+      case "Advanced":
+        return "bg-red-100 text-red-800";
+      default:
+        return "bg-gray-100 text-gray-800";
     }
   };
 
@@ -127,12 +132,12 @@ export default function Gym() {
           <h1 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
             <span className="text-garner-teal">Gym</span> Workouts
           </h1>
-          
+
           <p className="text-lg text-gray-600 max-w-2xl mx-auto mb-8">
-            Professional strength training programs designed to help you build muscle, lose fat, 
-            and get stronger
+            Professional strength training programs designed to help you build
+            muscle, lose fat, and get stronger
           </p>
-          
+
           <div className="flex flex-wrap justify-center gap-6 text-sm text-gray-600">
             <div className="flex items-center">
               <Target className="w-5 h-5 text-garner-teal mr-2" />
@@ -197,56 +202,77 @@ export default function Gym() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {filteredExercises.map((exercise) => (
-              <Card key={exercise.id} className="border-0 shadow-lg hover:shadow-xl transition-all duration-300 group hover:-translate-y-1">
+              <Card
+                key={exercise.id}
+                className="border-0 shadow-lg hover:shadow-xl transition-all duration-300 group hover:-translate-y-1"
+              >
                 <CardContent className="p-0">
                   {/* Icon Header */}
-                  <div className={`${exercise.color} p-8 text-center relative overflow-hidden`}>
+                  <div
+                    className={`${exercise.color} p-8 text-center relative overflow-hidden`}
+                  >
                     <div className="relative z-10">
                       <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
                         <span className="text-3xl">{exercise.icon}</span>
                       </div>
-                      <h3 className="text-2xl font-bold text-white mb-2">{exercise.name}</h3>
+                      <h3 className="text-2xl font-bold text-white mb-2">
+                        {exercise.name}
+                      </h3>
                       <div className="flex justify-center space-x-4 text-white/90 text-sm">
-                        <Badge className={`${getLevelColor(exercise.level)} text-xs`}>
+                        <Badge
+                          className={`${getLevelColor(exercise.level)} text-xs`}
+                        >
                           {exercise.level}
                         </Badge>
                       </div>
                     </div>
                   </div>
-                  
+
                   {/* Content */}
                   <div className="p-6">
                     <p className="text-gray-600 text-sm mb-4 leading-relaxed">
                       {exercise.description}
                     </p>
-                    
+
                     {/* Exercise Stats */}
                     <div className="grid grid-cols-3 gap-4 mb-4 text-center">
                       <div>
-                        <div className="text-lg font-bold text-gray-900">{exercise.sets}</div>
+                        <div className="text-lg font-bold text-gray-900">
+                          {exercise.sets}
+                        </div>
                         <div className="text-xs text-gray-500">Sets</div>
                       </div>
                       <div>
-                        <div className="text-lg font-bold text-gray-900">{exercise.reps}</div>
+                        <div className="text-lg font-bold text-gray-900">
+                          {exercise.reps}
+                        </div>
                         <div className="text-xs text-gray-500">Reps</div>
                       </div>
                       <div>
-                        <div className="text-lg font-bold text-gray-900">{exercise.duration}</div>
+                        <div className="text-lg font-bold text-gray-900">
+                          {exercise.duration}
+                        </div>
                         <div className="text-xs text-gray-500">Rest</div>
                       </div>
                     </div>
-                    
+
                     <div className="mb-4">
-                      <h4 className="text-sm font-semibold text-gray-900 mb-2">Target Muscles:</h4>
+                      <h4 className="text-sm font-semibold text-gray-900 mb-2">
+                        Target Muscles:
+                      </h4>
                       <div className="flex flex-wrap gap-1">
                         {exercise.targetMuscles.map((muscle, index) => (
-                          <Badge key={index} variant="outline" className="text-xs">
+                          <Badge
+                            key={index}
+                            variant="outline"
+                            className="text-xs"
+                          >
                             {muscle}
                           </Badge>
                         ))}
                       </div>
                     </div>
-                    
+
                     <div className="flex items-center justify-between mb-6">
                       <div className="flex items-center text-sm text-gray-500">
                         <Zap className="w-4 h-4 mr-1 text-orange-500" />
@@ -256,10 +282,8 @@ export default function Gym() {
                         {exercise.category}
                       </Badge>
                     </div>
-                    
-                    <Button 
-                      className="w-full bg-gray-100 hover:bg-garner-teal hover:text-white text-gray-700 font-medium transition-colors"
-                    >
+
+                    <Button className="w-full bg-gray-100 hover:bg-garner-teal hover:text-white text-gray-700 font-medium transition-colors">
                       Start Exercise
                     </Button>
                   </div>
@@ -276,7 +300,7 @@ export default function Gym() {
           <h2 className="text-3xl font-bold text-gray-900 mb-12">
             Track Your Progress
           </h2>
-          
+
           <div className="grid md:grid-cols-4 gap-8">
             <div className="text-center">
               <div className="w-16 h-16 bg-garner-teal/10 rounded-full flex items-center justify-center mx-auto mb-4">
@@ -317,17 +341,18 @@ export default function Gym() {
             Ready to Transform Your Body?
           </h2>
           <p className="text-lg text-white/90 mb-8">
-            Join our community and start building the strength and physique you've always wanted.
+            Join our community and start building the strength and physique
+            you've always wanted.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button 
-              variant="secondary" 
+            <Button
+              variant="secondary"
               className="bg-white text-garner-teal hover:bg-gray-50 font-medium px-8"
             >
               Start Your Journey
             </Button>
-            <Button 
-              variant="outline" 
+            <Button
+              variant="outline"
               className="border-white text-white hover:bg-white hover:text-garner-teal font-medium px-8"
             >
               View All Programs

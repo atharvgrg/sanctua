@@ -4,15 +4,21 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
-import { 
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
+import {
   ChevronLeft,
   ChevronRight,
   CheckCircle,
   Zap,
   Target,
   Download,
-  RotateCcw
+  RotateCcw,
 } from "lucide-react";
 
 export default function DietGeneration() {
@@ -24,14 +30,14 @@ export default function DietGeneration() {
     height: "",
     activityLevel: "",
     healthGoal: "",
-    dietType: ""
+    dietType: "",
   });
   const [showResults, setShowResults] = useState(false);
 
   const totalSteps = 4;
 
   const updateFormData = (field, value) => {
-    setFormData(prev => ({ ...prev, [field]: value }));
+    setFormData((prev) => ({ ...prev, [field]: value }));
   };
 
   const nextStep = () => {
@@ -58,7 +64,7 @@ export default function DietGeneration() {
       height: "",
       activityLevel: "",
       healthGoal: "",
-      dietType: ""
+      dietType: "",
     });
   };
 
@@ -72,32 +78,32 @@ export default function DietGeneration() {
       id: "sedentary",
       title: "Sedentary",
       description: "Little to no exercise",
-      multiplier: 1.2
+      multiplier: 1.2,
     },
     {
       id: "lightly_active",
       title: "Lightly Active",
       description: "Light exercise 1-3 days/week",
-      multiplier: 1.375
+      multiplier: 1.375,
     },
     {
       id: "moderately_active",
       title: "Moderately Active",
       description: "Moderate exercise 3-5 days/week",
-      multiplier: 1.55
+      multiplier: 1.55,
     },
     {
       id: "very_active",
       title: "Very Active",
       description: "Hard exercise 6-7 days/week",
-      multiplier: 1.725
+      multiplier: 1.725,
     },
     {
       id: "extra_active",
       title: "Extra Active",
       description: "Very hard exercise, physical job",
-      multiplier: 1.9
-    }
+      multiplier: 1.9,
+    },
   ];
 
   const healthGoals = [
@@ -106,29 +112,29 @@ export default function DietGeneration() {
       title: "Lose Weight",
       description: "Create caloric deficit",
       icon: "📉",
-      color: "bg-red-50 border-red-200"
+      color: "bg-red-50 border-red-200",
     },
     {
       id: "maintain_weight",
       title: "Maintain Weight",
       description: "Balanced caloric intake",
       icon: "⚖️",
-      color: "bg-blue-50 border-blue-200"
+      color: "bg-blue-50 border-blue-200",
     },
     {
       id: "gain_weight",
       title: "Gain Weight",
       description: "Caloric surplus for muscle",
       icon: "📈",
-      color: "bg-green-50 border-green-200"
+      color: "bg-green-50 border-green-200",
     },
     {
       id: "build_muscle",
       title: "Build Muscle",
       description: "High protein focus",
       icon: "💪",
-      color: "bg-orange-50 border-orange-200"
-    }
+      color: "bg-orange-50 border-orange-200",
+    },
   ];
 
   const dietTypes = [
@@ -136,38 +142,38 @@ export default function DietGeneration() {
       id: "balanced",
       title: "Balanced",
       description: "Well-rounded nutrition",
-      icon: "⚖️"
+      icon: "⚖️",
     },
     {
       id: "keto",
       title: "Keto",
       description: "Low carb, high fat",
-      icon: "🥑"
+      icon: "🥑",
     },
     {
       id: "mediterranean",
       title: "Mediterranean",
       description: "Heart-healthy fats",
-      icon: "🫒"
+      icon: "🫒",
     },
     {
       id: "vegetarian",
       title: "Vegetarian",
       description: "Plant-based nutrition",
-      icon: "🌱"
+      icon: "🌱",
     },
     {
       id: "vegan",
       title: "Vegan",
       description: "100% plant-based",
-      icon: "🌿"
+      icon: "🌿",
     },
     {
       id: "paleo",
       title: "Paleo",
       description: "Whole foods focused",
-      icon: "🍖"
-    }
+      icon: "🍖",
+    },
   ];
 
   const sampleMeals = {
@@ -177,7 +183,7 @@ export default function DietGeneration() {
       protein: 25,
       carbs: 35,
       fat: 8,
-      ingredients: ["Greek yogurt", "Berries", "Granola", "Honey"]
+      ingredients: ["Greek yogurt", "Berries", "Granola", "Honey"],
     },
     lunch: {
       name: "Quinoa Buddha Bowl",
@@ -185,7 +191,7 @@ export default function DietGeneration() {
       protein: 18,
       carbs: 50,
       fat: 16,
-      ingredients: ["Quinoa", "Roasted vegetables", "Chickpeas", "Tahini"]
+      ingredients: ["Quinoa", "Roasted vegetables", "Chickpeas", "Tahini"],
     },
     dinner: {
       name: "Lean Beef Stir Fry",
@@ -193,7 +199,7 @@ export default function DietGeneration() {
       protein: 30,
       carbs: 25,
       fat: 20,
-      ingredients: ["Lean beef", "Mixed vegetables", "Brown rice", "Ginger"]
+      ingredients: ["Lean beef", "Mixed vegetables", "Brown rice", "Ginger"],
     },
     morningSnack: {
       name: "Protein Bar",
@@ -201,7 +207,7 @@ export default function DietGeneration() {
       protein: 15,
       carbs: 20,
       fat: 8,
-      ingredients: ["Protein bar"]
+      ingredients: ["Protein bar"],
     },
     afternoonSnack: {
       name: "Greek Yogurt",
@@ -209,8 +215,8 @@ export default function DietGeneration() {
       protein: 12,
       carbs: 8,
       fat: 5,
-      ingredients: ["Greek yogurt", "Berries"]
-    }
+      ingredients: ["Greek yogurt", "Berries"],
+    },
   };
 
   if (showResults) {
@@ -236,25 +242,33 @@ export default function DietGeneration() {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
             <Card className="border-0 shadow-sm bg-white">
               <CardContent className="p-6 text-center">
-                <div className="text-2xl font-bold text-garner-teal mb-1">{totalCalories}</div>
+                <div className="text-2xl font-bold text-garner-teal mb-1">
+                  {totalCalories}
+                </div>
                 <div className="text-sm text-gray-600">Daily Calories</div>
               </CardContent>
             </Card>
             <Card className="border-0 shadow-sm bg-white">
               <CardContent className="p-6 text-center">
-                <div className="text-2xl font-bold text-blue-600 mb-1">{totalProtein}g</div>
+                <div className="text-2xl font-bold text-blue-600 mb-1">
+                  {totalProtein}g
+                </div>
                 <div className="text-sm text-gray-600">Protein</div>
               </CardContent>
             </Card>
             <Card className="border-0 shadow-sm bg-white">
               <CardContent className="p-6 text-center">
-                <div className="text-2xl font-bold text-green-600 mb-1">{totalCarbs}g</div>
+                <div className="text-2xl font-bold text-green-600 mb-1">
+                  {totalCarbs}g
+                </div>
                 <div className="text-sm text-gray-600">Carbs</div>
               </CardContent>
             </Card>
             <Card className="border-0 shadow-sm bg-white">
               <CardContent className="p-6 text-center">
-                <div className="text-2xl font-bold text-orange-600 mb-1">{totalFat}g</div>
+                <div className="text-2xl font-bold text-orange-600 mb-1">
+                  {totalFat}g
+                </div>
                 <div className="text-sm text-gray-600">Fat</div>
               </CardContent>
             </Card>
@@ -269,28 +283,42 @@ export default function DietGeneration() {
                   <span className="text-2xl mr-3">🍳</span>
                   <h3 className="text-xl font-bold text-gray-900">Breakfast</h3>
                 </div>
-                <h4 className="font-semibold text-gray-900 mb-2">{sampleMeals.breakfast.name}</h4>
+                <h4 className="font-semibold text-gray-900 mb-2">
+                  {sampleMeals.breakfast.name}
+                </h4>
                 <div className="grid grid-cols-4 gap-2 text-sm mb-4">
                   <div className="text-center">
-                    <div className="font-semibold text-garner-teal">{sampleMeals.breakfast.calories}</div>
+                    <div className="font-semibold text-garner-teal">
+                      {sampleMeals.breakfast.calories}
+                    </div>
                     <div className="text-xs text-gray-500">cal</div>
                   </div>
                   <div className="text-center">
-                    <div className="font-semibold text-blue-600">{sampleMeals.breakfast.protein}g</div>
+                    <div className="font-semibold text-blue-600">
+                      {sampleMeals.breakfast.protein}g
+                    </div>
                     <div className="text-xs text-gray-500">protein</div>
                   </div>
                   <div className="text-center">
-                    <div className="font-semibold text-green-600">{sampleMeals.breakfast.carbs}g</div>
+                    <div className="font-semibold text-green-600">
+                      {sampleMeals.breakfast.carbs}g
+                    </div>
                     <div className="text-xs text-gray-500">carbs</div>
                   </div>
                   <div className="text-center">
-                    <div className="font-semibold text-orange-600">{sampleMeals.breakfast.fat}g</div>
+                    <div className="font-semibold text-orange-600">
+                      {sampleMeals.breakfast.fat}g
+                    </div>
                     <div className="text-xs text-gray-500">fat</div>
                   </div>
                 </div>
                 <div>
-                  <p className="text-sm font-medium text-gray-700 mb-2">Ingredients:</p>
-                  <p className="text-sm text-gray-600">{sampleMeals.breakfast.ingredients.join(", ")}</p>
+                  <p className="text-sm font-medium text-gray-700 mb-2">
+                    Ingredients:
+                  </p>
+                  <p className="text-sm text-gray-600">
+                    {sampleMeals.breakfast.ingredients.join(", ")}
+                  </p>
                 </div>
               </CardContent>
             </Card>
@@ -302,28 +330,42 @@ export default function DietGeneration() {
                   <span className="text-2xl mr-3">🥗</span>
                   <h3 className="text-xl font-bold text-gray-900">Lunch</h3>
                 </div>
-                <h4 className="font-semibold text-gray-900 mb-2">{sampleMeals.lunch.name}</h4>
+                <h4 className="font-semibold text-gray-900 mb-2">
+                  {sampleMeals.lunch.name}
+                </h4>
                 <div className="grid grid-cols-4 gap-2 text-sm mb-4">
                   <div className="text-center">
-                    <div className="font-semibold text-garner-teal">{sampleMeals.lunch.calories}</div>
+                    <div className="font-semibold text-garner-teal">
+                      {sampleMeals.lunch.calories}
+                    </div>
                     <div className="text-xs text-gray-500">cal</div>
                   </div>
                   <div className="text-center">
-                    <div className="font-semibold text-blue-600">{sampleMeals.lunch.protein}g</div>
+                    <div className="font-semibold text-blue-600">
+                      {sampleMeals.lunch.protein}g
+                    </div>
                     <div className="text-xs text-gray-500">protein</div>
                   </div>
                   <div className="text-center">
-                    <div className="font-semibold text-green-600">{sampleMeals.lunch.carbs}g</div>
+                    <div className="font-semibold text-green-600">
+                      {sampleMeals.lunch.carbs}g
+                    </div>
                     <div className="text-xs text-gray-500">carbs</div>
                   </div>
                   <div className="text-center">
-                    <div className="font-semibold text-orange-600">{sampleMeals.lunch.fat}g</div>
+                    <div className="font-semibold text-orange-600">
+                      {sampleMeals.lunch.fat}g
+                    </div>
                     <div className="text-xs text-gray-500">fat</div>
                   </div>
                 </div>
                 <div>
-                  <p className="text-sm font-medium text-gray-700 mb-2">Ingredients:</p>
-                  <p className="text-sm text-gray-600">{sampleMeals.lunch.ingredients.join(", ")}</p>
+                  <p className="text-sm font-medium text-gray-700 mb-2">
+                    Ingredients:
+                  </p>
+                  <p className="text-sm text-gray-600">
+                    {sampleMeals.lunch.ingredients.join(", ")}
+                  </p>
                 </div>
               </CardContent>
             </Card>
@@ -335,28 +377,42 @@ export default function DietGeneration() {
                   <span className="text-2xl mr-3">🍽️</span>
                   <h3 className="text-xl font-bold text-gray-900">Dinner</h3>
                 </div>
-                <h4 className="font-semibold text-gray-900 mb-2">{sampleMeals.dinner.name}</h4>
+                <h4 className="font-semibold text-gray-900 mb-2">
+                  {sampleMeals.dinner.name}
+                </h4>
                 <div className="grid grid-cols-4 gap-2 text-sm mb-4">
                   <div className="text-center">
-                    <div className="font-semibold text-garner-teal">{sampleMeals.dinner.calories}</div>
+                    <div className="font-semibold text-garner-teal">
+                      {sampleMeals.dinner.calories}
+                    </div>
                     <div className="text-xs text-gray-500">cal</div>
                   </div>
                   <div className="text-center">
-                    <div className="font-semibold text-blue-600">{sampleMeals.dinner.protein}g</div>
+                    <div className="font-semibold text-blue-600">
+                      {sampleMeals.dinner.protein}g
+                    </div>
                     <div className="text-xs text-gray-500">protein</div>
                   </div>
                   <div className="text-center">
-                    <div className="font-semibold text-green-600">{sampleMeals.dinner.carbs}g</div>
+                    <div className="font-semibold text-green-600">
+                      {sampleMeals.dinner.carbs}g
+                    </div>
                     <div className="text-xs text-gray-500">carbs</div>
                   </div>
                   <div className="text-center">
-                    <div className="font-semibold text-orange-600">{sampleMeals.dinner.fat}g</div>
+                    <div className="font-semibold text-orange-600">
+                      {sampleMeals.dinner.fat}g
+                    </div>
                     <div className="text-xs text-gray-500">fat</div>
                   </div>
                 </div>
                 <div>
-                  <p className="text-sm font-medium text-gray-700 mb-2">Ingredients:</p>
-                  <p className="text-sm text-gray-600">{sampleMeals.dinner.ingredients.join(", ")}</p>
+                  <p className="text-sm font-medium text-gray-700 mb-2">
+                    Ingredients:
+                  </p>
+                  <p className="text-sm text-gray-600">
+                    {sampleMeals.dinner.ingredients.join(", ")}
+                  </p>
                 </div>
               </CardContent>
             </Card>
@@ -369,30 +425,46 @@ export default function DietGeneration() {
               <CardContent className="p-6">
                 <div className="flex items-center mb-4">
                   <span className="text-2xl mr-3">🍎</span>
-                  <h3 className="text-xl font-bold text-gray-900">Morning Snack</h3>
+                  <h3 className="text-xl font-bold text-gray-900">
+                    Morning Snack
+                  </h3>
                 </div>
-                <h4 className="font-semibold text-gray-900 mb-2">{sampleMeals.morningSnack.name}</h4>
+                <h4 className="font-semibold text-gray-900 mb-2">
+                  {sampleMeals.morningSnack.name}
+                </h4>
                 <div className="grid grid-cols-4 gap-2 text-sm mb-4">
                   <div className="text-center">
-                    <div className="font-semibold text-garner-teal">{sampleMeals.morningSnack.calories}</div>
+                    <div className="font-semibold text-garner-teal">
+                      {sampleMeals.morningSnack.calories}
+                    </div>
                     <div className="text-xs text-gray-500">cal</div>
                   </div>
                   <div className="text-center">
-                    <div className="font-semibold text-blue-600">{sampleMeals.morningSnack.protein}g</div>
+                    <div className="font-semibold text-blue-600">
+                      {sampleMeals.morningSnack.protein}g
+                    </div>
                     <div className="text-xs text-gray-500">protein</div>
                   </div>
                   <div className="text-center">
-                    <div className="font-semibold text-green-600">{sampleMeals.morningSnack.carbs}g</div>
+                    <div className="font-semibold text-green-600">
+                      {sampleMeals.morningSnack.carbs}g
+                    </div>
                     <div className="text-xs text-gray-500">carbs</div>
                   </div>
                   <div className="text-center">
-                    <div className="font-semibold text-orange-600">{sampleMeals.morningSnack.fat}g</div>
+                    <div className="font-semibold text-orange-600">
+                      {sampleMeals.morningSnack.fat}g
+                    </div>
                     <div className="text-xs text-gray-500">fat</div>
                   </div>
                 </div>
                 <div>
-                  <p className="text-sm font-medium text-gray-700 mb-2">Ingredients:</p>
-                  <p className="text-sm text-gray-600">{sampleMeals.morningSnack.ingredients.join(", ")}</p>
+                  <p className="text-sm font-medium text-gray-700 mb-2">
+                    Ingredients:
+                  </p>
+                  <p className="text-sm text-gray-600">
+                    {sampleMeals.morningSnack.ingredients.join(", ")}
+                  </p>
                 </div>
               </CardContent>
             </Card>
@@ -402,30 +474,46 @@ export default function DietGeneration() {
               <CardContent className="p-6">
                 <div className="flex items-center mb-4">
                   <span className="text-2xl mr-3">🥤</span>
-                  <h3 className="text-xl font-bold text-gray-900">Afternoon Snack</h3>
+                  <h3 className="text-xl font-bold text-gray-900">
+                    Afternoon Snack
+                  </h3>
                 </div>
-                <h4 className="font-semibold text-gray-900 mb-2">{sampleMeals.afternoonSnack.name}</h4>
+                <h4 className="font-semibold text-gray-900 mb-2">
+                  {sampleMeals.afternoonSnack.name}
+                </h4>
                 <div className="grid grid-cols-4 gap-2 text-sm mb-4">
                   <div className="text-center">
-                    <div className="font-semibold text-garner-teal">{sampleMeals.afternoonSnack.calories}</div>
+                    <div className="font-semibold text-garner-teal">
+                      {sampleMeals.afternoonSnack.calories}
+                    </div>
                     <div className="text-xs text-gray-500">cal</div>
                   </div>
                   <div className="text-center">
-                    <div className="font-semibold text-blue-600">{sampleMeals.afternoonSnack.protein}g</div>
+                    <div className="font-semibold text-blue-600">
+                      {sampleMeals.afternoonSnack.protein}g
+                    </div>
                     <div className="text-xs text-gray-500">protein</div>
                   </div>
                   <div className="text-center">
-                    <div className="font-semibold text-green-600">{sampleMeals.afternoonSnack.carbs}g</div>
+                    <div className="font-semibold text-green-600">
+                      {sampleMeals.afternoonSnack.carbs}g
+                    </div>
                     <div className="text-xs text-gray-500">carbs</div>
                   </div>
                   <div className="text-center">
-                    <div className="font-semibold text-orange-600">{sampleMeals.afternoonSnack.fat}g</div>
+                    <div className="font-semibold text-orange-600">
+                      {sampleMeals.afternoonSnack.fat}g
+                    </div>
                     <div className="text-xs text-gray-500">fat</div>
                   </div>
                 </div>
                 <div>
-                  <p className="text-sm font-medium text-gray-700 mb-2">Ingredients:</p>
-                  <p className="text-sm text-gray-600">{sampleMeals.afternoonSnack.ingredients.join(", ")}</p>
+                  <p className="text-sm font-medium text-gray-700 mb-2">
+                    Ingredients:
+                  </p>
+                  <p className="text-sm text-gray-600">
+                    {sampleMeals.afternoonSnack.ingredients.join(", ")}
+                  </p>
                 </div>
               </CardContent>
             </Card>
@@ -434,7 +522,9 @@ export default function DietGeneration() {
           {/* Nutrition Tips */}
           <Card className="border-0 shadow-lg mb-8">
             <CardContent className="p-6">
-              <h3 className="text-xl font-bold text-gray-900 mb-4">Nutrition Tips</h3>
+              <h3 className="text-xl font-bold text-gray-900 mb-4">
+                Nutrition Tips
+              </h3>
               <ul className="space-y-2 text-gray-600">
                 <li className="flex items-start">
                   <CheckCircle className="w-5 h-5 text-garner-green mr-2 mt-0.5 flex-shrink-0" />
@@ -488,15 +578,16 @@ export default function DietGeneration() {
           <Button className="bg-garner-green hover:bg-garner-dark-green text-white font-medium px-6 py-2 rounded-full mb-6">
             🥗 Personalized Nutrition
           </Button>
-          
+
           <h1 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
             <span className="text-purple-600">Diet</span> Generator
           </h1>
-          
+
           <p className="text-lg text-gray-600 max-w-2xl mx-auto mb-8">
-            Get a personalized nutrition plan tailored to your goals, preferences, and lifestyle
+            Get a personalized nutrition plan tailored to your goals,
+            preferences, and lifestyle
           </p>
-          
+
           <div className="flex flex-wrap justify-center gap-6 text-sm text-gray-600">
             <div className="flex items-center">
               <Target className="w-5 h-5 text-purple-600 mr-2" />
@@ -516,11 +607,15 @@ export default function DietGeneration() {
         {/* Progress Bar */}
         <div className="mb-8">
           <div className="flex justify-between items-center mb-2">
-            <span className="text-sm font-medium text-gray-700">Diet Plan Creation</span>
-            <span className="text-sm text-gray-500">Step {currentStep} of {totalSteps}</span>
+            <span className="text-sm font-medium text-gray-700">
+              Diet Plan Creation
+            </span>
+            <span className="text-sm text-gray-500">
+              Step {currentStep} of {totalSteps}
+            </span>
           </div>
           <div className="w-full bg-gray-200 rounded-full h-2">
-            <div 
+            <div
               className="bg-gradient-to-r from-garner-teal to-garner-green h-2 rounded-full transition-all duration-300"
               style={{ width: `${getProgressPercentage()}%` }}
             ></div>
@@ -537,25 +632,42 @@ export default function DietGeneration() {
                   <div className="w-8 h-8 bg-garner-teal rounded-full flex items-center justify-center mr-3">
                     <span className="text-white font-bold text-sm">1</span>
                   </div>
-                  <h2 className="text-2xl font-bold text-gray-900">Basic Information</h2>
+                  <h2 className="text-2xl font-bold text-gray-900">
+                    Basic Information
+                  </h2>
                 </div>
-                <p className="text-gray-600 mb-8">Tell us about yourself to calculate your nutritional needs</p>
-                
+                <p className="text-gray-600 mb-8">
+                  Tell us about yourself to calculate your nutritional needs
+                </p>
+
                 <div className="grid md:grid-cols-2 gap-6">
                   <div>
-                    <Label htmlFor="age" className="text-sm font-medium text-gray-700 mb-2 block">Age</Label>
+                    <Label
+                      htmlFor="age"
+                      className="text-sm font-medium text-gray-700 mb-2 block"
+                    >
+                      Age
+                    </Label>
                     <Input
                       id="age"
                       type="number"
                       placeholder="25"
                       value={formData.age}
-                      onChange={(e) => updateFormData('age', e.target.value)}
+                      onChange={(e) => updateFormData("age", e.target.value)}
                       className="w-full"
                     />
                   </div>
                   <div>
-                    <Label htmlFor="gender" className="text-sm font-medium text-gray-700 mb-2 block">Gender</Label>
-                    <Select value={formData.gender} onValueChange={(value) => updateFormData('gender', value)}>
+                    <Label
+                      htmlFor="gender"
+                      className="text-sm font-medium text-gray-700 mb-2 block"
+                    >
+                      Gender
+                    </Label>
+                    <Select
+                      value={formData.gender}
+                      onValueChange={(value) => updateFormData("gender", value)}
+                    >
                       <SelectTrigger className="w-full">
                         <SelectValue placeholder="Select..." />
                       </SelectTrigger>
@@ -567,24 +679,34 @@ export default function DietGeneration() {
                     </Select>
                   </div>
                   <div>
-                    <Label htmlFor="weight" className="text-sm font-medium text-gray-700 mb-2 block">Weight (kg)</Label>
+                    <Label
+                      htmlFor="weight"
+                      className="text-sm font-medium text-gray-700 mb-2 block"
+                    >
+                      Weight (kg)
+                    </Label>
                     <Input
                       id="weight"
                       type="number"
                       placeholder="70"
                       value={formData.weight}
-                      onChange={(e) => updateFormData('weight', e.target.value)}
+                      onChange={(e) => updateFormData("weight", e.target.value)}
                       className="w-full"
                     />
                   </div>
                   <div>
-                    <Label htmlFor="height" className="text-sm font-medium text-gray-700 mb-2 block">Height (cm)</Label>
+                    <Label
+                      htmlFor="height"
+                      className="text-sm font-medium text-gray-700 mb-2 block"
+                    >
+                      Height (cm)
+                    </Label>
                     <Input
                       id="height"
                       type="number"
                       placeholder="175"
                       value={formData.height}
-                      onChange={(e) => updateFormData('height', e.target.value)}
+                      onChange={(e) => updateFormData("height", e.target.value)}
                       className="w-full"
                     />
                   </div>
@@ -599,15 +721,19 @@ export default function DietGeneration() {
                   <div className="w-8 h-8 bg-garner-teal rounded-full flex items-center justify-center mr-3">
                     <span className="text-white font-bold text-sm">2</span>
                   </div>
-                  <h2 className="text-2xl font-bold text-gray-900">Activity Level</h2>
+                  <h2 className="text-2xl font-bold text-gray-900">
+                    Activity Level
+                  </h2>
                 </div>
-                <p className="text-gray-600 mb-8">How active are you on a typical day?</p>
-                
+                <p className="text-gray-600 mb-8">
+                  How active are you on a typical day?
+                </p>
+
                 <div className="space-y-4">
                   {activityLevels.map((level) => (
                     <div
                       key={level.id}
-                      onClick={() => updateFormData('activityLevel', level.id)}
+                      onClick={() => updateFormData("activityLevel", level.id)}
                       className={`p-4 rounded-lg border-2 cursor-pointer transition-all ${
                         formData.activityLevel === level.id
                           ? "border-garner-teal bg-garner-teal/5"
@@ -616,14 +742,20 @@ export default function DietGeneration() {
                     >
                       <div className="flex justify-between items-center">
                         <div>
-                          <h3 className="font-semibold text-gray-900">{level.title}</h3>
-                          <p className="text-sm text-gray-600">{level.description}</p>
+                          <h3 className="font-semibold text-gray-900">
+                            {level.title}
+                          </h3>
+                          <p className="text-sm text-gray-600">
+                            {level.description}
+                          </p>
                         </div>
-                        <div className={`w-4 h-4 rounded-full border-2 ${
-                          formData.activityLevel === level.id
-                            ? "border-garner-teal bg-garner-teal"
-                            : "border-gray-300"
-                        }`}></div>
+                        <div
+                          className={`w-4 h-4 rounded-full border-2 ${
+                            formData.activityLevel === level.id
+                              ? "border-garner-teal bg-garner-teal"
+                              : "border-gray-300"
+                          }`}
+                        ></div>
                       </div>
                     </div>
                   ))}
@@ -638,15 +770,19 @@ export default function DietGeneration() {
                   <div className="w-8 h-8 bg-garner-teal rounded-full flex items-center justify-center mr-3">
                     <span className="text-white font-bold text-sm">3</span>
                   </div>
-                  <h2 className="text-2xl font-bold text-gray-900">Health Goal</h2>
+                  <h2 className="text-2xl font-bold text-gray-900">
+                    Health Goal
+                  </h2>
                 </div>
-                <p className="text-gray-600 mb-8">What's your primary fitness goal?</p>
-                
+                <p className="text-gray-600 mb-8">
+                  What's your primary fitness goal?
+                </p>
+
                 <div className="grid md:grid-cols-2 gap-4">
                   {healthGoals.map((goal) => (
                     <div
                       key={goal.id}
-                      onClick={() => updateFormData('healthGoal', goal.id)}
+                      onClick={() => updateFormData("healthGoal", goal.id)}
                       className={`p-6 rounded-lg border-2 cursor-pointer transition-all text-center ${
                         formData.healthGoal === goal.id
                           ? "border-garner-teal bg-garner-teal/5"
@@ -654,8 +790,12 @@ export default function DietGeneration() {
                       }`}
                     >
                       <div className="text-3xl mb-3">{goal.icon}</div>
-                      <h3 className="font-semibold text-gray-900 mb-2">{goal.title}</h3>
-                      <p className="text-sm text-gray-600">{goal.description}</p>
+                      <h3 className="font-semibold text-gray-900 mb-2">
+                        {goal.title}
+                      </h3>
+                      <p className="text-sm text-gray-600">
+                        {goal.description}
+                      </p>
                     </div>
                   ))}
                 </div>
@@ -669,15 +809,19 @@ export default function DietGeneration() {
                   <div className="w-8 h-8 bg-garner-teal rounded-full flex items-center justify-center mr-3">
                     <span className="text-white font-bold text-sm">4</span>
                   </div>
-                  <h2 className="text-2xl font-bold text-gray-900">Diet Type</h2>
+                  <h2 className="text-2xl font-bold text-gray-900">
+                    Diet Type
+                  </h2>
                 </div>
-                <p className="text-gray-600 mb-8">Choose your preferred eating style</p>
-                
+                <p className="text-gray-600 mb-8">
+                  Choose your preferred eating style
+                </p>
+
                 <div className="grid md:grid-cols-3 gap-4">
                   {dietTypes.map((diet) => (
                     <div
                       key={diet.id}
-                      onClick={() => updateFormData('dietType', diet.id)}
+                      onClick={() => updateFormData("dietType", diet.id)}
                       className={`p-6 rounded-lg border-2 cursor-pointer transition-all text-center ${
                         formData.dietType === diet.id
                           ? "border-garner-teal bg-garner-teal/5"
@@ -685,8 +829,12 @@ export default function DietGeneration() {
                       }`}
                     >
                       <div className="text-3xl mb-3">{diet.icon}</div>
-                      <h3 className="font-semibold text-gray-900 mb-2">{diet.title}</h3>
-                      <p className="text-sm text-gray-600">{diet.description}</p>
+                      <h3 className="font-semibold text-gray-900 mb-2">
+                        {diet.title}
+                      </h3>
+                      <p className="text-sm text-gray-600">
+                        {diet.description}
+                      </p>
                     </div>
                   ))}
                 </div>
@@ -698,23 +846,29 @@ export default function DietGeneration() {
               <Button
                 onClick={prevStep}
                 variant="outline"
-                className={`border-gray-300 text-gray-700 ${currentStep === 1 ? 'invisible' : ''}`}
+                className={`border-gray-300 text-gray-700 ${currentStep === 1 ? "invisible" : ""}`}
               >
                 <ChevronLeft className="w-4 h-4 mr-2" />
                 Back
               </Button>
-              
+
               <Button
                 onClick={nextStep}
                 className="bg-garner-teal hover:bg-garner-dark-teal text-white"
                 disabled={
-                  (currentStep === 1 && (!formData.age || !formData.gender || !formData.weight || !formData.height)) ||
+                  (currentStep === 1 &&
+                    (!formData.age ||
+                      !formData.gender ||
+                      !formData.weight ||
+                      !formData.height)) ||
                   (currentStep === 2 && !formData.activityLevel) ||
                   (currentStep === 3 && !formData.healthGoal) ||
                   (currentStep === 4 && !formData.dietType)
                 }
               >
-                {currentStep === totalSteps ? 'Generate My Diet Plan' : 'Continue'}
+                {currentStep === totalSteps
+                  ? "Generate My Diet Plan"
+                  : "Continue"}
                 <ChevronRight className="w-4 h-4 ml-2" />
               </Button>
             </div>

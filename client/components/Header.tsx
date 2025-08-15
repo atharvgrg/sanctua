@@ -1,7 +1,7 @@
-import { Link } from 'react-router-dom';
-import { ChevronDown, Menu, X } from 'lucide-react';
-import { Button } from './ui/button';
-import { useState } from 'react';
+import { Link } from "react-router-dom";
+import { ChevronDown, Menu, X } from "lucide-react";
+import { Button } from "./ui/button";
+import { useState } from "react";
 
 export function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -36,13 +36,22 @@ export function Header() {
               </Link>
               <div className="absolute top-full left-0 mt-1 w-48 bg-white rounded-md shadow-lg border border-gray-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
                 <div className="py-2">
-                  <Link to="/yoga" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-garner-teal">
+                  <Link
+                    to="/yoga"
+                    className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-garner-teal"
+                  >
                     Yoga Practice
                   </Link>
-                  <Link to="/gym" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-garner-teal">
+                  <Link
+                    to="/gym"
+                    className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-garner-teal"
+                  >
                     Gym Workouts
                   </Link>
-                  <Link to="/diet-generation" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-garner-teal">
+                  <Link
+                    to="/diet-generation"
+                    className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-garner-teal"
+                  >
                     Diet Generator
                   </Link>
                 </div>
@@ -70,19 +79,21 @@ export function Header() {
             >
               Login / Sign Up
             </Button>
-            <Button
-              className="bg-garner-teal hover:bg-garner-dark-teal text-white font-medium px-6"
-            >
+            <Button className="bg-garner-teal hover:bg-garner-dark-teal text-white font-medium px-6">
               Get Started
             </Button>
           </div>
 
           {/* Mobile menu button */}
-          <button 
+          <button
             className="lg:hidden p-2 text-gray-500 hover:text-gray-700 transition-colors"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
           >
-            {isMobileMenuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+            {isMobileMenuOpen ? (
+              <X className="w-6 h-6" />
+            ) : (
+              <Menu className="w-6 h-6" />
+            )}
           </button>
         </div>
 
@@ -146,9 +157,7 @@ export function Header() {
                 >
                   Login / Sign Up
                 </Button>
-                <Button
-                  className="w-full bg-garner-teal hover:bg-garner-dark-teal text-white font-medium"
-                >
+                <Button className="w-full bg-garner-teal hover:bg-garner-dark-teal text-white font-medium">
                   Get Started
                 </Button>
               </div>
