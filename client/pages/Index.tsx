@@ -254,7 +254,7 @@ export default function Index() {
                 </p>
                 <ul className="space-y-2 text-sm text-white/90 mb-6">
                   <li>• Custom Meal Plans</li>
-                  <li>��� Nutritionist Approved</li>
+                  <li>• Nutritionist Approved</li>
                   <li>• Health Tracking</li>
                 </ul>
                 <Button variant="secondary" className="bg-white text-purple-500 hover:bg-gray-100">
@@ -337,24 +337,29 @@ export default function Index() {
 
           <div className="grid md:grid-cols-2 gap-8">
             {/* Local Clinics */}
-            <Card className="border-0 shadow-lg hover:shadow-xl transition-shadow">
+            <Card className="border-0 shadow-lg hover:shadow-xl transition-all duration-300 group hover:-translate-y-1">
               <CardContent className="p-8">
-                <div className="flex items-start space-x-4">
-                  <div className="w-16 h-16 bg-garner-teal/10 rounded-xl flex items-center justify-center flex-shrink-0">
-                    <MapPin className="w-8 h-8 text-garner-teal" />
+                <div className="flex items-start space-x-6">
+                  <div className="w-20 h-20 bg-gradient-to-br from-garner-teal to-garner-dark-teal rounded-2xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
+                    <MapPin className="w-10 h-10 text-white" />
                   </div>
                   <div className="flex-1">
-                    <h3 className="text-xl font-bold text-gray-900 mb-2">Local Clinics</h3>
-                    <p className="text-gray-600 mb-4">
+                    <div className="flex items-center justify-between mb-3">
+                      <span className="text-sm font-semibold text-garner-teal bg-garner-teal/10 px-3 py-1 rounded-full">
+                        Primary Care
+                      </span>
+                    </div>
+                    <h3 className="text-2xl font-bold text-gray-900 mb-3">Local Clinics</h3>
+                    <p className="text-gray-600 mb-4 leading-relaxed">
                       Find nearby medical clinics for routine checkups and consultations
                     </p>
-                    <div className="flex items-center space-x-4 text-sm text-gray-500">
+                    <div className="flex items-center space-x-6 text-sm">
                       <div className="flex items-center">
-                        <Star className="w-4 h-4 text-yellow-400 fill-current mr-1" />
-                        <span className="font-medium">4.7</span>
+                        <Star className="w-4 h-4 text-yellow-400 fill-current mr-2" />
+                        <span className="font-semibold text-gray-900">4.7</span>
                       </div>
-                      <div className="flex items-center">
-                        <Clock className="w-4 h-4 mr-1" />
+                      <div className="flex items-center text-gray-500">
+                        <Clock className="w-4 h-4 mr-2" />
                         <span>15-30 minutes</span>
                       </div>
                     </div>
@@ -364,24 +369,29 @@ export default function Index() {
             </Card>
 
             {/* Specialist Doctors */}
-            <Card className="border-0 shadow-lg hover:shadow-xl transition-shadow">
+            <Card className="border-0 shadow-lg hover:shadow-xl transition-all duration-300 group hover:-translate-y-1">
               <CardContent className="p-8">
-                <div className="flex items-start space-x-4">
-                  <div className="w-16 h-16 bg-garner-green/10 rounded-xl flex items-center justify-center flex-shrink-0">
-                    <Users className="w-8 h-8 text-garner-green" />
+                <div className="flex items-start space-x-6">
+                  <div className="w-20 h-20 bg-gradient-to-br from-garner-green to-garner-dark-green rounded-2xl flex items-center justify-center flex-shrink-0 group-hover:scale-110 transition-transform duration-300">
+                    <Users className="w-10 h-10 text-white" />
                   </div>
                   <div className="flex-1">
-                    <h3 className="text-xl font-bold text-gray-900 mb-2">Specialist Doctors</h3>
-                    <p className="text-gray-600 mb-4">
+                    <div className="flex items-center justify-between mb-3">
+                      <span className="text-sm font-semibold text-garner-green bg-garner-green/10 px-3 py-1 rounded-full">
+                        Specialized Care
+                      </span>
+                    </div>
+                    <h3 className="text-2xl font-bold text-gray-900 mb-3">Specialist Doctors</h3>
+                    <p className="text-gray-600 mb-4 leading-relaxed">
                       Connect with specialized healthcare professionals for expert care
                     </p>
-                    <div className="flex items-center space-x-4 text-sm text-gray-500">
+                    <div className="flex items-center space-x-6 text-sm">
                       <div className="flex items-center">
-                        <Star className="w-4 h-4 text-yellow-400 fill-current mr-1" />
-                        <span className="font-medium">4.9</span>
+                        <Star className="w-4 h-4 text-yellow-400 fill-current mr-2" />
+                        <span className="font-semibold text-gray-900">4.9</span>
                       </div>
-                      <div className="flex items-center">
-                        <Clock className="w-4 h-4 mr-1" />
+                      <div className="flex items-center text-gray-500">
+                        <Clock className="w-4 h-4 mr-2" />
                         <span>1-2 weeks</span>
                       </div>
                     </div>
