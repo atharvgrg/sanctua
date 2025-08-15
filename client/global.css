@@ -54,6 +54,15 @@
     --sidebar-border: 220 13% 91%;
 
     --sidebar-ring: 217.2 91.2% 59.8%;
+
+    /* SANCTUA Brand Colors */
+    --sanctua-primary: 186 100% 37%;
+    --sanctua-secondary: 199 100% 45%;
+    --sanctua-turquoise: 186 100% 37%;
+    --sanctua-light-blue: 199 100% 45%;
+    --sanctua-purple: 269 100% 75%;
+    --sanctua-green: 142 76% 36%;
+    --sanctua-orange: 39 100% 50%;
   }
 
   .dark {
