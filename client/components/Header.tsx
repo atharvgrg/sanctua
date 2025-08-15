@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
-import { Search, HelpCircle, Globe, User } from 'lucide-react';
+import { Search, HelpCircle, Globe, User, Menu, X } from 'lucide-react';
 import { Button } from './ui/button';
+import { useState } from 'react';
 
 export function Header() {
   return (
