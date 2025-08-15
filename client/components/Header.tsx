@@ -105,6 +105,27 @@ export function Header() {
                 Fitness
               </Link>
               <Link
+                to="/yoga"
+                className="block px-6 py-2 text-gray-600 hover:text-garner-teal text-sm transition-colors"
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                • Yoga Practice
+              </Link>
+              <Link
+                to="/gym"
+                className="block px-6 py-2 text-gray-600 hover:text-garner-teal text-sm transition-colors"
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                • Gym Workouts
+              </Link>
+              <Link
+                to="/diet-generation"
+                className="block px-6 py-2 text-gray-600 hover:text-garner-teal text-sm transition-colors"
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                • Diet Generator
+              </Link>
+              <Link
                 to="/symptoms"
                 className="block px-3 py-2 text-gray-700 hover:text-garner-teal font-medium transition-colors"
                 onClick={() => setIsMobileMenuOpen(false)}
