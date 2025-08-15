@@ -261,9 +261,11 @@ export default function Index() {
                   <li>• Nutritionist Approved</li>
                   <li>• Health Tracking</li>
                 </ul>
-                <Button variant="secondary" className="bg-white text-purple-500 hover:bg-gray-100">
-                  Explore Diet Generation →
-                </Button>
+                <Link to="/diet-generation">
+                  <Button variant="secondary" className="bg-white text-purple-500 hover:bg-gray-100">
+                    Explore Diet Generation →
+                  </Button>
+                </Link>
               </CardContent>
             </Card>
           </div>
