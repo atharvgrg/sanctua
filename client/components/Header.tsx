@@ -26,12 +26,28 @@ export function Header() {
             >
               Home
             </Link>
-            <Link
-              to="/fitness"
-              className="text-gray-700 hover:text-garner-teal font-medium transition-colors"
-            >
-              Fitness
-            </Link>
+            <div className="group relative">
+              <Link
+                to="/fitness"
+                className="text-gray-700 hover:text-garner-teal font-medium transition-colors flex items-center"
+              >
+                Fitness
+                <ChevronDown className="w-4 h-4 ml-1" />
+              </Link>
+              <div className="absolute top-full left-0 mt-1 w-48 bg-white rounded-md shadow-lg border border-gray-100 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-50">
+                <div className="py-2">
+                  <Link to="/yoga" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-garner-teal">
+                    Yoga Practice
+                  </Link>
+                  <Link to="/gym" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-garner-teal">
+                    Gym Workouts
+                  </Link>
+                  <Link to="/diet-generation" className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-garner-teal">
+                    Diet Generator
+                  </Link>
+                </div>
+              </div>
+            </div>
             <Link
               to="/symptoms"
               className="text-gray-700 hover:text-garner-teal font-medium transition-colors"
