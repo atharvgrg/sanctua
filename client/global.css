@@ -55,14 +55,14 @@
 
     --sidebar-ring: 217.2 91.2% 59.8%;
 
-    /* SANCTUA Brand Colors */
-    --sanctua-primary: 186 100% 37%;
-    --sanctua-secondary: 199 100% 45%;
-    --sanctua-turquoise: 186 100% 37%;
-    --sanctua-light-blue: 199 100% 45%;
-    --sanctua-purple: 269 100% 75%;
-    --sanctua-green: 142 76% 36%;
-    --sanctua-orange: 39 100% 50%;
+    /* Garner Professional Colors */
+    --garner-primary: 174 100% 29%;
+    --garner-secondary: 174 55% 45%;
+    --garner-teal: 174 100% 29%;
+    --garner-dark-teal: 174 100% 20%;
+    --garner-green: 150 100% 35%;
+    --garner-dark-green: 150 100% 25%;
+    --garner-accent: 174 55% 45%;
   }
 
   .dark {
@@ -102,14 +102,14 @@
     --sidebar-border: 240 3.7% 15.9%;
     --sidebar-ring: 217.2 91.2% 59.8%;
 
-    /* SANCTUA Brand Colors - Dark Mode */
-    --sanctua-primary: 186 100% 37%;
-    --sanctua-secondary: 199 100% 45%;
-    --sanctua-turquoise: 186 100% 37%;
-    --sanctua-light-blue: 199 100% 45%;
-    --sanctua-purple: 269 100% 75%;
-    --sanctua-green: 142 76% 36%;
-    --sanctua-orange: 39 100% 50%;
+    /* Garner Professional Colors - Dark Mode */
+    --garner-primary: 174 100% 29%;
+    --garner-secondary: 174 55% 45%;
+    --garner-teal: 174 100% 29%;
+    --garner-dark-teal: 174 100% 20%;
+    --garner-green: 150 100% 35%;
+    --garner-dark-green: 150 100% 25%;
+    --garner-accent: 174 55% 45%;
   }
 }
 
