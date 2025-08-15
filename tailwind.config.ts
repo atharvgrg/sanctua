@@ -57,6 +57,15 @@ export default {
           border: "hsl(var(--sidebar-border))",
           ring: "hsl(var(--sidebar-ring))",
         },
+        sanctua: {
+          primary: "hsl(var(--sanctua-primary))",
+          secondary: "hsl(var(--sanctua-secondary))",
+          turquoise: "hsl(var(--sanctua-turquoise))",
+          "light-blue": "hsl(var(--sanctua-light-blue))",
+          purple: "hsl(var(--sanctua-purple))",
+          green: "hsl(var(--sanctua-green))",
+          orange: "hsl(var(--sanctua-orange))",
+        },
       },
       borderRadius: {
         lg: "var(--radius)",
