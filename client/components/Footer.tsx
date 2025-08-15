@@ -7,45 +7,21 @@ export function Footer() {
         <div className="grid md:grid-cols-4 gap-8">
           {/* Logo and Description */}
           <div className="md:col-span-1">
-            <Link to="/" className="flex items-center mb-4">
-              <span className="text-2xl font-bold text-garner-teal lowercase">garner</span>
+            <Link to="/" className="flex items-center space-x-2 mb-4">
+              <div className="w-8 h-8 bg-garner-teal rounded-full flex items-center justify-center">
+                <div className="w-4 h-4 bg-white rounded-full"></div>
+              </div>
+              <span className="text-2xl font-bold text-gray-900">SANCTUA</span>
             </Link>
             <p className="text-gray-600 text-sm leading-relaxed">
-              Empowering better healthcare decisions through data-driven insights 
-              and provider transparency.
+              Your trusted healthcare companion, providing comprehensive medical services 
+              and wellness solutions for individuals and families worldwide.
             </p>
           </div>
 
-          {/* Product Links */}
+          {/* Quick Links */}
           <div>
-            <h3 className="text-gray-900 font-semibold mb-4">Product</h3>
-            <ul className="space-y-3 text-sm text-gray-600">
-              <li>
-                <Link to="/individuals" className="hover:text-garner-teal transition-colors">
-                  For Individuals
-                </Link>
-              </li>
-              <li>
-                <Link to="/employers" className="hover:text-garner-teal transition-colors">
-                  For Employers
-                </Link>
-              </li>
-              <li>
-                <Link to="/advisors" className="hover:text-garner-teal transition-colors">
-                  For Advisors
-                </Link>
-              </li>
-              <li>
-                <Link to="/datapro" className="hover:text-garner-teal transition-colors">
-                  DataPro
-                </Link>
-              </li>
-            </ul>
-          </div>
-
-          {/* Company Links */}
-          <div>
-            <h3 className="text-gray-900 font-semibold mb-4">Company</h3>
+            <h3 className="text-gray-900 font-semibold mb-4">Quick Links</h3>
             <ul className="space-y-3 text-sm text-gray-600">
               <li>
                 <Link to="/about" className="hover:text-garner-teal transition-colors">
@@ -53,60 +29,91 @@ export function Footer() {
                 </Link>
               </li>
               <li>
+                <Link to="/services" className="hover:text-garner-teal transition-colors">
+                  Our Services
+                </Link>
+              </li>
+              <li>
+                <Link to="/doctors" className="hover:text-garner-teal transition-colors">
+                  Find Doctors
+                </Link>
+              </li>
+              <li>
+                <Link to="/appointments" className="hover:text-garner-teal transition-colors">
+                  Book Appointment
+                </Link>
+              </li>
+              <li>
                 <Link to="/careers" className="hover:text-garner-teal transition-colors">
                   Careers
-                </Link>
-              </li>
-              <li>
-                <Link to="/press" className="hover:text-garner-teal transition-colors">
-                  Press
-                </Link>
-              </li>
-              <li>
-                <Link to="/blog" className="hover:text-garner-teal transition-colors">
-                  Blog
-                </Link>
-              </li>
-              <li>
-                <Link to="/contact" className="hover:text-garner-teal transition-colors">
-                  Contact
                 </Link>
               </li>
             </ul>
           </div>
 
-          {/* Resources */}
+          {/* Health Services */}
           <div>
-            <h3 className="text-gray-900 font-semibold mb-4">Resources</h3>
+            <h3 className="text-gray-900 font-semibold mb-4">Health Services</h3>
             <ul className="space-y-3 text-sm text-gray-600">
               <li>
-                <Link to="/help" className="hover:text-garner-teal transition-colors">
-                  Help Center
+                <Link to="/symptom-checker" className="hover:text-garner-teal transition-colors">
+                  Symptom Checker
                 </Link>
               </li>
               <li>
-                <Link to="/privacy" className="hover:text-garner-teal transition-colors">
-                  Privacy Policy
+                <Link to="/fitness" className="hover:text-garner-teal transition-colors">
+                  Fitness Programs
                 </Link>
               </li>
               <li>
-                <Link to="/terms" className="hover:text-garner-teal transition-colors">
-                  Terms of Service
+                <Link to="/mental-health" className="hover:text-garner-teal transition-colors">
+                  Mental Health
                 </Link>
               </li>
               <li>
-                <Link to="/security" className="hover:text-garner-teal transition-colors">
-                  Security
+                <Link to="/specialized-care" className="hover:text-garner-teal transition-colors">
+                  Specialized Care
+                </Link>
+              </li>
+              <li>
+                <Link to="/telemedicine" className="hover:text-garner-teal transition-colors">
+                  Telemedicine
                 </Link>
               </li>
             </ul>
+          </div>
+
+          {/* Contact Info */}
+          <div>
+            <h3 className="text-gray-900 font-semibold mb-4">Contact Info</h3>
+            <div className="space-y-3 text-sm text-gray-600">
+              <div>
+                <div className="text-gray-900 font-medium">+1(555) 123-4567</div>
+                <div className="text-xs">Emergency Hotline</div>
+              </div>
+              
+              <div>
+                <div className="text-gray-900">care@sanctua.com</div>
+                <div className="text-xs">General Inquiries</div>
+              </div>
+              
+              <div>
+                <div className="text-gray-900">123 Health Street, Medical District</div>
+                <div className="text-xs">Main Campus</div>
+              </div>
+              
+              <div>
+                <div className="text-gray-900">24/7 Emergency • Mon-Fri 8AM-8PM</div>
+                <div className="text-xs">Operating Hours</div>
+              </div>
+            </div>
           </div>
         </div>
 
         {/* Bottom Bar */}
         <div className="border-t border-gray-200 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
           <div className="text-sm text-gray-500 mb-4 md:mb-0">
-            © 2024 Garner Health. All rights reserved.
+            © 2024 SANCTUA. All rights reserved.
           </div>
           <div className="flex space-x-6 text-sm text-gray-500">
             <Link to="/privacy" className="hover:text-garner-teal transition-colors">
