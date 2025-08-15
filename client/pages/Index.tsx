@@ -254,7 +254,7 @@ export default function Index() {
                 </p>
                 <ul className="space-y-2 text-sm text-white/90 mb-6">
                   <li>• Custom Meal Plans</li>
-                  <li>• Nutritionist Approved</li>
+                  <li>��� Nutritionist Approved</li>
                   <li>• Health Tracking</li>
                 </ul>
                 <Button variant="secondary" className="bg-white text-purple-500 hover:bg-gray-100">
@@ -280,43 +280,43 @@ export default function Index() {
 
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
             {/* Symptom Cards */}
-            <Card className="border-0 shadow-sm hover:shadow-md transition-shadow cursor-pointer bg-white">
+            <Card className="border-0 shadow-lg hover:shadow-xl transition-all duration-300 cursor-pointer bg-white group hover:-translate-y-1">
               <CardContent className="p-6 text-center">
-                <div className="w-12 h-12 bg-garner-teal/10 rounded-lg flex items-center justify-center mx-auto mb-4">
-                  <Thermometer className="w-6 h-6 text-garner-teal" />
+                <div className="w-14 h-14 bg-gradient-to-br from-garner-teal to-garner-dark-teal rounded-xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
+                  <Thermometer className="w-7 h-7 text-white" />
                 </div>
-                <h3 className="font-semibold text-gray-900 mb-2">Fever</h3>
-                <p className="text-sm text-gray-600">High body temperature and related symptoms</p>
+                <h3 className="font-bold text-gray-900 mb-2">Fever</h3>
+                <p className="text-sm text-gray-600 leading-relaxed">High body temperature and related symptoms</p>
               </CardContent>
             </Card>
 
-            <Card className="border-0 shadow-sm hover:shadow-md transition-shadow cursor-pointer bg-white">
+            <Card className="border-0 shadow-lg hover:shadow-xl transition-all duration-300 cursor-pointer bg-white group hover:-translate-y-1">
               <CardContent className="p-6 text-center">
-                <div className="w-12 h-12 bg-garner-green/10 rounded-lg flex items-center justify-center mx-auto mb-4">
-                  <Zap className="w-6 h-6 text-garner-green" />
+                <div className="w-14 h-14 bg-gradient-to-br from-garner-green to-garner-dark-green rounded-xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
+                  <Zap className="w-7 h-7 text-white" />
                 </div>
-                <h3 className="font-semibold text-gray-900 mb-2">Gastric / Colic Pain</h3>
-                <p className="text-sm text-gray-600">Abdominal discomfort and digestive issues</p>
+                <h3 className="font-bold text-gray-900 mb-2">Gastric / Colic Pain</h3>
+                <p className="text-sm text-gray-600 leading-relaxed">Abdominal discomfort and digestive issues</p>
               </CardContent>
             </Card>
 
-            <Card className="border-0 shadow-sm hover:shadow-md transition-shadow cursor-pointer bg-white">
+            <Card className="border-0 shadow-lg hover:shadow-xl transition-all duration-300 cursor-pointer bg-white group hover:-translate-y-1">
               <CardContent className="p-6 text-center">
-                <div className="w-12 h-12 bg-purple-100 rounded-lg flex items-center justify-center mx-auto mb-4">
-                  <Activity className="w-6 h-6 text-purple-600" />
+                <div className="w-14 h-14 bg-gradient-to-br from-purple-500 to-purple-600 rounded-xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
+                  <Activity className="w-7 h-7 text-white" />
                 </div>
-                <h3 className="font-semibold text-gray-900 mb-2">Body Aches</h3>
-                <p className="text-sm text-gray-600">General muscle and joint discomfort</p>
+                <h3 className="font-bold text-gray-900 mb-2">Body Aches</h3>
+                <p className="text-sm text-gray-600 leading-relaxed">General muscle and joint discomfort</p>
               </CardContent>
             </Card>
 
-            <Card className="border-0 shadow-sm hover:shadow-md transition-shadow cursor-pointer bg-white">
+            <Card className="border-0 shadow-lg hover:shadow-xl transition-all duration-300 cursor-pointer bg-white group hover:-translate-y-1">
               <CardContent className="p-6 text-center">
-                <div className="w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center mx-auto mb-4">
-                  <AlertTriangle className="w-6 h-6 text-orange-600" />
+                <div className="w-14 h-14 bg-gradient-to-br from-orange-500 to-orange-600 rounded-xl flex items-center justify-center mx-auto mb-4 group-hover:scale-110 transition-transform duration-300">
+                  <AlertTriangle className="w-7 h-7 text-white" />
                 </div>
-                <h3 className="font-semibold text-gray-900 mb-2">Dust Allergy</h3>
-                <p className="text-sm text-gray-600">Respiratory reactions and environmental allergens</p>
+                <h3 className="font-bold text-gray-900 mb-2">Dust Allergy</h3>
+                <p className="text-sm text-gray-600 leading-relaxed">Respiratory reactions and environmental allergens</p>
               </CardContent>
             </Card>
           </div>
