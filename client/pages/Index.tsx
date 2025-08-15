@@ -98,69 +98,78 @@ export default function Index() {
       </section>
 
       {/* Healthcare Services Section */}
-      <section className="py-16 bg-gray-50">
+      <section className="py-20 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">
+              Comprehensive Healthcare Solutions
+            </h2>
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+              Tailored healthcare services for every need, from individuals to enterprises
+            </p>
+          </div>
+
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
             {/* For Individuals & Families */}
-            <Card className="border-0 shadow-sm hover:shadow-md transition-shadow bg-white">
-              <CardContent className="p-6">
-                <div className="w-12 h-12 bg-garner-teal/10 rounded-lg flex items-center justify-center mb-4">
-                  <Users className="w-6 h-6 text-garner-teal" />
+            <Card className="border-0 shadow-lg hover:shadow-xl transition-all duration-300 bg-white group hover:-translate-y-1">
+              <CardContent className="p-8">
+                <div className="w-16 h-16 bg-gradient-to-br from-garner-teal to-garner-dark-teal rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                  <Users className="w-8 h-8 text-white" />
                 </div>
-                <h3 className="font-semibold text-gray-900 mb-2">For Individuals & Families</h3>
-                <p className="text-sm text-gray-600 mb-4">
+                <h3 className="text-xl font-bold text-gray-900 mb-3">For Individuals & Families</h3>
+                <p className="text-gray-600 mb-6 leading-relaxed">
                   Find the best healthcare providers in your network and get your medical bills reimbursed.
                 </p>
-                <Button variant="link" className="text-garner-teal p-0 h-auto">
-                  Learn more <ArrowRight className="w-4 h-4 ml-1" />
+                <Button variant="link" className="text-garner-teal p-0 h-auto font-semibold group-hover:text-garner-dark-teal transition-colors">
+                  Learn more <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
                 </Button>
               </CardContent>
             </Card>
 
             {/* For Employers */}
-            <Card className="border-0 shadow-sm hover:shadow-md transition-shadow bg-white">
-              <CardContent className="p-6">
-                <div className="w-12 h-12 bg-gray-900/10 rounded-lg flex items-center justify-center mb-4">
-                  <Heart className="w-6 h-6 text-gray-900" />
+            <Card className="border-0 shadow-lg hover:shadow-xl transition-all duration-300 bg-white group hover:-translate-y-1">
+              <CardContent className="p-8">
+                <div className="w-16 h-16 bg-gradient-to-br from-gray-700 to-gray-900 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                  <Heart className="w-8 h-8 text-white" />
                 </div>
-                <h3 className="font-semibold text-gray-900 mb-2">For Employers</h3>
-                <p className="text-sm text-gray-600 mb-4">
+                <h3 className="text-xl font-bold text-gray-900 mb-3">For Employers</h3>
+                <p className="text-gray-600 mb-6 leading-relaxed">
                   Provide your employees with comprehensive healthcare benefits and wellness programs.
                 </p>
-                <Button variant="link" className="text-garner-teal p-0 h-auto">
-                  Learn more <ArrowRight className="w-4 h-4 ml-1" />
+                <Button variant="link" className="text-garner-teal p-0 h-auto font-semibold group-hover:text-garner-dark-teal transition-colors">
+                  Learn more <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
                 </Button>
               </CardContent>
             </Card>
 
             {/* For Advisors */}
-            <Card className="border-0 shadow-sm hover:shadow-md transition-shadow bg-white">
-              <CardContent className="p-6">
-                <div className="w-12 h-12 bg-orange-100 rounded-lg flex items-center justify-center mb-4">
-                  <Activity className="w-6 h-6 text-orange-600" />
+            <Card className="border-0 shadow-lg hover:shadow-xl transition-all duration-300 bg-white group hover:-translate-y-1">
+              <CardContent className="p-8">
+                <div className="w-16 h-16 bg-gradient-to-br from-orange-500 to-orange-600 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                  <Activity className="w-8 h-8 text-white" />
                 </div>
-                <h3 className="font-semibold text-gray-900 mb-2">For Advisors</h3>
-                <p className="text-sm text-gray-600 mb-4">
+                <h3 className="text-xl font-bold text-gray-900 mb-3">For Advisors</h3>
+                <p className="text-gray-600 mb-6 leading-relaxed">
                   Guide your clients to better healthcare decisions with our comprehensive platform.
                 </p>
-                <Button variant="link" className="text-garner-teal p-0 h-auto">
-                  Learn more <ArrowRight className="w-4 h-4 ml-1" />
+                <Button variant="link" className="text-garner-teal p-0 h-auto font-semibold group-hover:text-garner-dark-teal transition-colors">
+                  Learn more <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
                 </Button>
               </CardContent>
             </Card>
 
             {/* DataPro */}
-            <Card className="border-0 shadow-sm hover:shadow-md transition-shadow bg-white">
-              <CardContent className="p-6">
-                <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
-                  <Stethoscope className="w-6 h-6 text-blue-600" />
+            <Card className="border-0 shadow-lg hover:shadow-xl transition-all duration-300 bg-white group hover:-translate-y-1">
+              <CardContent className="p-8">
+                <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-600 rounded-xl flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+                  <Stethoscope className="w-8 h-8 text-white" />
                 </div>
-                <h3 className="font-semibold text-gray-900 mb-2">DataPro</h3>
-                <p className="text-sm text-gray-600 mb-4">
+                <h3 className="text-xl font-bold text-gray-900 mb-3">DataPro</h3>
+                <p className="text-gray-600 mb-6 leading-relaxed">
                   Better healthcare insights using SANCTUA's comprehensive health data platform.
                 </p>
-                <Button variant="link" className="text-garner-teal p-0 h-auto">
-                  Learn more <ArrowRight className="w-4 h-4 ml-1" />
+                <Button variant="link" className="text-garner-teal p-0 h-auto font-semibold group-hover:text-garner-dark-teal transition-colors">
+                  Learn more <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
                 </Button>
               </CardContent>
             </Card>
