@@ -207,9 +207,11 @@ export default function Index() {
                   <li>• Expert Instructors</li>
                   <li>• Stress Relief</li>
                 </ul>
-                <Button variant="secondary" className="bg-white text-garner-green hover:bg-gray-100">
-                  Explore Yoga →
-                </Button>
+                <Link to="/yoga">
+                  <Button variant="secondary" className="bg-white text-garner-green hover:bg-gray-100">
+                    Explore Yoga →
+                  </Button>
+                </Link>
               </CardContent>
             </Card>
 
